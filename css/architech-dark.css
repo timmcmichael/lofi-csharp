@@ -9,7 +9,8 @@
   --secondarycolor: #b0c4de;
   /* #b1bcc5; */
   --tertiarycolor: #87ceeb;
-  --highlightcolor: #b98e00;
+  /* --highlightcolor: #b98e00; */
+  --highlightcolor: #614214;
   --sidebarbackground: #21252b;
   --linkcolor: #34bdf8;
   --linkcoloralternate: #ff9800;
@@ -116,4 +117,17 @@ td:not(.listingblock .content pre td) {
   font-family: var(--heading-font) !important;
   font-weight: bold !important;
   font-size: 1.5em !important;
+}
+
+/* improve highlighted text */
+mark {
+  color: var(--primarycolor);
+}
+
+/* Fix b-sides and deep cuts */
+.callout.dc .content,
+.callout.bs .content {
+  color: var(--white) !important;
+  background-color: var(--sidebarbackground) !important;
+  /* background-color: purple !important; */
 }
