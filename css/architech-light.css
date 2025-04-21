@@ -12,6 +12,13 @@
   --linkcolor: #0D47A1;
   --linkcoloralternate: #B71C1C;
   --stickynote: #f9a825;
+
+  /* Callout colors */
+  /* 
+  --deepcutcolor: inherit;
+  --bsidecolor: inherit;
+  --spincolor: inherit; */
+
   --white: #FFFFFF;
   --black: #000000;
 }

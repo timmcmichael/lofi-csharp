@@ -18,6 +18,12 @@
   --white: #FFFFFF;
   --black: #000000;
 
+  /* Callout colors */
+
+  --deepcutcolor: var(--linkcolor);
+  --bsidecolor: var(--linkcoloralternate);
+  --spincolor: var(--tertiarycolor);
+
   --main-font: "Work Sans", sans-serif;
   --heading-font: "Architects Daughter", cursive;
   --monospace-font: "Source Code Pro", monospace;
@@ -224,11 +230,11 @@ video {
 }
 
 .callout.bs {
-  border-color: var(--linkcoloralternate);
+  border-color: var(--bsidecolor);
 
 
   .bs-icon {
-    fill: var(--linkcoloralternate);
+    fill: var(--bsidecolor);
     width: 3em;
     height: 3em;
     vertical-align: text-center;
@@ -236,16 +242,16 @@ video {
   }
 
   .callout-title {
-    color: var(--linkcoloralternate) !important;
+    color: var(--bsidecolor) !important;
   }
 
 }
 
 .callout.dc {
-  border-color: var(--linkcolor);
+  border-color: var(--deepcutcolor);
 
   .dc-icon {
-    fill: var(--linkcolor);
+    fill: var(--deepcutcolor);
     width: 3em;
     height: 3em;
     vertical-align: text-center;
@@ -253,8 +259,25 @@ video {
   }
 
   .callout-title {
-    color: var(--linkcolor) !important;
+    color: var(--deepcutcolor) !important;
   }
+}
+
+.callout.spin {
+  border-color: var(--spincolor);
+
+  .spin-icon {
+    fill: var(--spincolor);
+    width: 3em;
+    height: 3em;
+    vertical-align: text-center;
+    margin-right: 1em;
+  }
+
+  .callout-title {
+    color: var(--spincolor) !important;
+  }
+
 }
 
 .timetowatch {
