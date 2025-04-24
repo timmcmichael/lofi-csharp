@@ -80,7 +80,7 @@
 </li>
 <li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
 </li>
-<li><a href="_b_side_software_development.html">B-Side: Software Development</a>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
@@ -278,8 +278,10 @@ Other than that, a <code>do-while</code> loop is exactly the same as a <code>whi
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">do</span><span style="color: #f8f8f2"> {</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
 <span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
@@ -352,14 +354,16 @@ For example, if a program displays a menu with three options, a loop could keep 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">InputValidation</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">InputValidation</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> choiceString;</span>
 
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">do</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">        {</span>
 <span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
@@ -547,7 +551,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-04-24<br />
-        10:50:38 -0700<br />
+        11:56:20 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

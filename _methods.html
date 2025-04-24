@@ -72,7 +72,7 @@
 </li>
 <li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
 </li>
-<li><a href="_b_side_software_development.html">B-Side: Software Development</a>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
@@ -277,7 +277,7 @@ Trying to use a variable in a different code block is referred to as an <em>out 
 <span style="color: #f8f8f2">{</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(favoriteNumber); </span><i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -285,7 +285,7 @@ Trying to use a variable in a different code block is referred to as an <em>out 
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(favoriteNumber); </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">}</span></code></pre>
@@ -344,7 +344,7 @@ However, <em>this</em> <code>favoriteNumber</code> wasn&#8217;t changed to 10&#8
 <span style="color: #f8f8f2">{</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -354,7 +354,7 @@ However, <em>this</em> <code>favoriteNumber</code> wasn&#8217;t changed to 10&#8
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="3"></i><b>(3)</b>
 <span style="color: #f8f8f2">        favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">;</span>
@@ -413,7 +413,7 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
 
 <span style="color: #f8f8f2">        OutputNumber();</span>
@@ -422,7 +422,7 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
 <span style="color: #f8f8f2">        favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">    }</span>
@@ -510,12 +510,12 @@ The methods we&#8217;ve defined so far didn&#8217;t need any outside information
 <span style="color: #f8f8f2">{</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        OutputGreeting(</span><span style="color: #e6db74">&quot;Tim&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="1"></i><b>(1)</b>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputGreeting</span><span style="color: #f8f8f2">(string name)</span>
-<span style="color: #f8f8f2">{ </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">    { </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello, &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;!&quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">    }</span>
 
@@ -746,12 +746,12 @@ That <code>Write()</code> statement won&#8217;t work&#8212;&#8203;rather, the us
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">BadOutput</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        KingOfSoul();</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">KingOfSoul</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Sam Cooke&quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">    }</span>
 
@@ -781,12 +781,12 @@ The solution is to return the string and perform the output in <code>Main()</cod
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GoodOutput</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.WriteLine(KingOfSoul());</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">KingOfSoul</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Sam Cooke&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
 
@@ -887,8 +887,8 @@ An overload for our <code>averageAge()</code> method could look like this:</p>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age3)</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -907,10 +907,10 @@ An implementation that accepts `double`s is valid:</p>
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age3)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age3)</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -950,20 +950,20 @@ The <em>names</em> of those parameters doesn&#8217;t differentiate them, so diff
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">BadOverloading</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.WriteLine(area(</span><span style="color: #ae81ff">15</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="1"></i><b>(1)</b>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #959077">// Calculates area of a rectangle</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Area</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> length, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> width)</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> length </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> width;</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #959077">// Calculates area of an oval</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Area</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> smallRadius,</span>
 <span style="color: #f8f8f2">            </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> bigRadius)</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> area </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3.14</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> smallRadius </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> bigRadius;</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> area;</span>
 <span style="color: #f8f8f2">    }</span>
@@ -990,24 +990,24 @@ The method signature must be unique so the compiler can identify which method co
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        Console.WriteLine(averageAge(</span><span style="color: #ae81ff">1.25</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">1.5</span><span style="color: #f8f8f2">, .</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="1"></i><b>(1)</b>
 <span style="color: #f8f8f2">        Console.WriteLine(averageAge(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">        Console.WriteLine(averageAge(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="3"></i><b>(3)</b>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2)</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age3)</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age3)</span>
-<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
 
@@ -1164,7 +1164,7 @@ Solution file from video:</p>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-04-24<br />
-        10:50:38 -0700<br />
+        11:56:20 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

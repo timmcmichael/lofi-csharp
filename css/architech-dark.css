@@ -124,9 +124,10 @@ mark {
   color: var(--primarycolor);
 }
 
-/* Fix b-sides and deep cuts */
+/* Fix b-sides, deep cuts, and "take it for a spin" callout colors */
 .callout.dc .content,
-.callout.bs .content {
+.callout.bs .content,
+.callout.spin .content {
   color: var(--white) !important;
   background-color: var(--sidebarbackground) !important;
   /* background-color: purple !important; */
