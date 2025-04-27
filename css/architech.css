@@ -21,8 +21,8 @@
   /* Callout colors */
 
   --deepcutcolor: var(--linkcolor);
-  --bsidecolor: var(--linkcoloralternate);
-  --spincolor: var(--tertiarycolor);
+  --bsidecolor: var(--tertiarycolor);
+  --spincolor: var(--linkcoloralternate);
 
   --main-font: "Work Sans", sans-serif;
   --heading-font: "Architects Daughter", cursive;
@@ -54,13 +54,10 @@ h6 {
 
 h2,
 h3,
+h4,
 h5,
 h6 {
   color: var(--secondarycolor) !important;
-}
-
-h4 {
-  color: var(--tertiarycolor) !important;
 }
 
 h2::before {
@@ -134,7 +131,7 @@ mark {
 }
 
 /* Table styles */
-th {
+/* th {
   background-color: var(--maincolor);
   color: var(--black) !important;
 }
@@ -142,7 +139,7 @@ th {
 td:not(.listingblock .content pre td) {
   background-color: var(--maincolor);
   color: var(--black) !important;
-}
+} */
 
 #toc.toc2 {
   background-color: var(--sidebarbackground);
@@ -332,4 +329,13 @@ video {
 .conum {
   background-color: blue !important;
   color: #000 !important;
+}
+
+/* fixing line number mismatch */
+/* Sync the line numbers and code */
+.linenotable pre {
+  line-height: 1.4; /* or whatever looks best */
+}
+.code pre {
+  line-height: 1.4 !important; /* or whatever looks best */
 }

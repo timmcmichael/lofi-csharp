@@ -78,7 +78,7 @@
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
-<li><a href="b-sides-and-deep-cuts.html">Deep Cuts</a>
+<li><a href="deep-cuts.html">Deep Cuts</a>
 </li>
 <li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
@@ -99,7 +99,7 @@
 <p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
 </div>
 <div class="paragraph">
-<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark></p>
+<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Most noticeably (other than stuff that&#8217;s just missing) is the presence of placeholder links where I haven&#8217;t quite finished videos. Check back later for a more complete version.</mark></p>
 </div>
 </div>
 </div>
@@ -110,7 +110,7 @@
 *</p>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a>.</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -171,16 +171,18 @@ In our math class, we could draw symbols that aren&#8217;t on our keyboard, like
 In C#, where we have to stick with stuff on our keyboard, we use the following symbols:</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 50%;">
-<caption class="title">Table 2. C# comparison operators</caption>
+<caption class="title">Table 3. C# comparison operators</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 83.3334%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Operator</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Operator</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>==</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Equality (checks if two values are equal)</p></td>
@@ -361,7 +363,7 @@ Basically, it&#8217;s an either-or situation.</p>
 To handle this, we can chain multiple <code>if-else</code> statements together.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.5 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing an <code>if-else if</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
+<div class="title">Example 4.5 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing an <code>if-else if</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -515,7 +517,7 @@ Nested if statements check multiple conditions in a hierarchical way: if one con
 The if-else structures within those blocks check the average wind speed and return an appropriate description.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.7 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing a nested <code>if-else</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
+<div class="title">Example 4.7 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing a nested <code>if-else</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -631,18 +633,20 @@ The if-else structures within those blocks check the average wind speed and retu
 A logical operator is a binary operation, so it takes two operands&#8212;&#8203;but the operands are Boolean expressions instead of numbers.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 75%;">
-<caption class="title">Table 3. C# logical operators</caption>
+<caption class="title">Table 4. C# logical operators</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
 <col style="width: 71.4286%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Operator</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Operator</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&amp;&amp;</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AND</p></td>
@@ -949,8 +953,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-24<br />
-        13:25:20 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-26<br />
+        19:40:01 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

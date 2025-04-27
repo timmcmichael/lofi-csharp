@@ -76,7 +76,7 @@
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
-<li><a href="b-sides-and-deep-cuts.html">Deep Cuts</a>
+<li><a href="deep-cuts.html">Deep Cuts</a>
 </li>
 <li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
@@ -97,7 +97,7 @@
 <p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
 </div>
 <div class="paragraph">
-<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark></p>
+<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Most noticeably (other than stuff that&#8217;s just missing) is the presence of placeholder links where I haven&#8217;t quite finished videos. Check back later for a more complete version.</mark></p>
 </div>
 </div>
 </div>
@@ -120,7 +120,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/03%20Methods" target="_blank" rel="noopener">GitHub</a>.</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/03%20Methods" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -137,7 +137,7 @@ Consider the assembly instructions for building a LEGO set.</p>
 <div class="title">Figure 3.1 - LEGO blocks</div>
 </div>
 <div class="paragraph">
-<p>It might take dozens of small steps to complete the set, but taken together, the instructions execute a single task: building the set.
+<p>It might take dozens of small steps to assemble it, but taken together, the instructions execute a single task: building the set.
 A method is conceptually the same.</p>
 </div>
 <div class="paragraph">
@@ -211,7 +211,7 @@ In C#, parentheses <strong>always</strong> indicate a method, whether or not the
 <p>The <code>void</code> keyword indicates that this method will not return anything. This is called the method&#8217;s <em>return type</em>, and we&#8217;ll learn about this shortly.</p>
 </li>
 <li>
-<p><code>DisplayBandName</code> is the identifier for the method, in the same way variables have identifiers. Like variable identifiers, new words within the name get captialized; however, method names also have a capital first letter. This naming style is called <em>Pascal case</em> (while variables use <em>camel case</em>). And as with variables, make the name descriptive. The convention is that the name of a method should describe what it does; usually, that means the identifier is (or includes) a verb, like "display" in this example.</p>
+<p><code>DisplayBandName</code> is the identifier for the method, in the same way variables have identifiers. Like variable identifiers, new words within the name get captialized; however, method names also have a capital first letter. This naming style is called <em>Pascal case</em> (while variables use <em>camel case</em>). And as with variables, be sure to make the name descriptive. The convention is that the name of a method should describe what it does; usually, that means the identifier is (or includes) a verb, like "display" in this example.</p>
 </li>
 <li>
 <p>The parentheses indicate to the compiler that this is a method, as opposed to a variable or some other fancy thing. You&#8217;ll see what we can put in the parentheses shortly.</p>
@@ -224,12 +224,22 @@ In C#, parentheses <strong>always</strong> indicate a method, whether or not the
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>Defining and Calling Methods in C# [COMING SOON!]</p>
+<p>Defining and Calling Methods in C#</p>
 </div>
 <div class="videoblock">
 <div class="content">
-<iframe src="https://www.youtube.com/embed/hAxUD7xV7h8?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/vYACKsQaONQ?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
 </div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/03%20Methods/GoodSong.cs" target="_blank" rel="noopener"><code>GoodSong.cs</code></a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -238,7 +248,7 @@ In C#, parentheses <strong>always</strong> indicate a method, whether or not the
 <h3 id="_variable_scope">3.2. Variable Scope</h3>
 <div class="paragraph">
 <p>As we begin organizing our code into different methods and (when we learn <a href="#_0111_classes_and_objects">object-oriented programming basics</a>) classes, we&#8217;ll need to understand how data is compartmentalized within a program.
-Whenever we create a class or method&#8212;&#8203;and other structures we&#8217;ll learn as we go&#8212;&#8203;we use curly braces to define the boundaries and indenting to help make those boundaries clear.
+Whenever we create a class or method&#8212;&#8203;and other structures we&#8217;ll learn as we go&#8212;&#8203;we use curly braces to define the boundaries, and we use indenting to help make those boundaries clear.
 These braces form <em>code blocks</em>.</p>
 </div>
 <div class="paragraph">
@@ -258,7 +268,7 @@ Many IDEs, including <a href="https://visualstudio.microsoft.com/" target="_blan
 <div class="content">
 <img src="images/chapter3/NestedCodeBlocks.png" alt="A screenshot of Java source code with blocks indicated by bracketing">
 </div>
-<div class="title">Figure 3.2 - Nested blocks in with Visual Studio Code&#8217;s color coding.</div>
+<div class="title">Figure 3.2 - Nested blocks displayed with Visual Studio Code&#8217;s color coding.</div>
 </div>
 <div class="paragraph">
 <p>A variable can only be used or accessed inside the block in which it was declared, or within a block nested within that block; this is the variable&#8217;s <code>scope</code>.
@@ -278,15 +288,15 @@ Trying to use a variable in a different code block is referred to as an <em>out 
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(favoriteNumber); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numberOfSongs </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(numberOfSongs); </span><i class="conum" data-value="1"></i><b>(1)</b>
 
 <span style="color: #f8f8f2">        OutputNumber();</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(favoriteNumber); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(numberOfSongs); </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">}</span></code></pre>
 </div>
@@ -295,11 +305,11 @@ Trying to use a variable in a different code block is referred to as an <em>out 
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This is a valid, or <em>in scope</em>, reference because <code>favoriteNumber</code> is declared within <code>Main()</code>.</td>
+<td>This is a valid, or <em>in scope</em>, reference because <code>numberOfSongs</code> is declared within <code>Main()</code>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This is an invalid <em>out of scope</em> reference because <code>favoriteNumber</code> can only be accessed within <code>Main()</code>.</td>
+<td>This is an invalid <em>out of scope</em> reference because <code>numberOfSongs</code> can only be accessed within <code>Main()</code>.</td>
 </tr>
 </table>
 </div>
@@ -313,10 +323,10 @@ Shadowing is a <strong>very</strong> bad practice, because it often leads to con
 </div>
 <div class="paragraph">
 <p>The example below can be confusing to beginners and to people who are reading the code quickly.
-When <code>OutputNumber()</code> is called, another variable named <code>favoriteNumber</code> is created and assigned the value <code>18</code>.
+When <code>OutputNumber()</code> is called, another variable named <code>numberOfSongs</code> is created and assigned the value <code>18</code>.
 After that is output, an assignment statement changes that value to <code>10</code>.
-Then, program execution returns to <code>Main()</code>, where a <code>WriteLine()</code> statement outputs <code>favoriteNumber</code> again.
-However, <em>this</em> <code>favoriteNumber</code> wasn&#8217;t changed to 10&#8212;&#8203;the other one was.</p>
+Then, program execution returns to <code>Main()</code>, where a <code>WriteLine()</code> statement outputs <code>numberOfSongs</code> again.
+However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10&#8212;&#8203;the other one was.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.3 - Variable shadowing, which we should avoid.</div>
@@ -345,19 +355,19 @@ However, <em>this</em> <code>favoriteNumber</code> wasn&#8217;t changed to 10&#8
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numberOfSongs </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        Console.WriteLine(numberOfSongs); </span><i class="conum" data-value="1"></i><b>(1)</b>
 
 <span style="color: #f8f8f2">        OutputNumber();</span>
 
-<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">        Console.WriteLine(numberOfSongs); </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="3"></i><b>(3)</b>
-<span style="color: #f8f8f2">        favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numberOfSongs </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        Console.WriteLine(numberOfSongs); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">        numberOfSongs </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -375,7 +385,7 @@ However, <em>this</em> <code>favoriteNumber</code> wasn&#8217;t changed to 10&#8
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>This still outputs <code>7</code> because the change to <code>10</code> is made to the <code>favoriteNumber</code> within the <code>outputNumber()</code> method.</td>
+<td>This still outputs <code>7</code> because the change to <code>10</code> is made to the <code>numberOfSongs</code> within the <code>outputNumber()</code> method.</td>
 </tr>
 </table>
 </div>
@@ -410,21 +420,21 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GlobalVariableExample</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numberOfSongs </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(numberOfSongs);</span>
 
 <span style="color: #f8f8f2">        OutputNumber();</span>
 
-<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(numberOfSongs);</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
-<span style="color: #f8f8f2">        favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">        Console.WriteLine(numberOfSongs);</span>
+<span style="color: #f8f8f2">        numberOfSongs </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="2"></i><b>(2)</b>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -438,7 +448,7 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This changes the value of <code>favoriteNumber</code> to 18 for all methods in the program.</td>
+<td>This changes the value of <code>numberOfSongs</code> to 18 for all methods in the program.</td>
 </tr>
 </table>
 </div>
@@ -452,7 +462,7 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices&#8212;&#8203;and that means minimizing the use of global variables.
+The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices&#8212;&#8203;and that means we don&#8217;t use global variables.
 </td>
 </tr>
 </table>
@@ -469,7 +479,7 @@ The best practice is to pass that variable value to the method as needed, and fo
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In the chapter on <a href="#_0111_classes_and_objects">classes and objects</a>, we will start using variables that look a lot like the global variables I just said we shouldn&#8217;t use. To be clear, those <em>instance variables</em> behave differently and serve a different purpose. They are <em>global variables</em> as described here.
+In the chapter on <a href="#_0111_classes_and_objects">classes and objects</a>, we will start using variables that look a lot like the global variables I just said we shouldn&#8217;t use. To be clear, those <em>instance variables</em> behave differently and serve a different purpose. They are not <em>global variables</em> as described here.
 </td>
 </tr>
 </table>
@@ -490,15 +500,14 @@ So, the <code>string</code> we want to output is passed to the <code>Write()</co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Hello World&quot;</span><span style="color: #f8f8f2">);</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Hello World&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>In this example, "Hello World" is an argument.</p>
 </div>
 <div class="paragraph">
-<p>We establish what information a method needs as part of the method definition.
+<p>We specify what information a method needs as part of the method definition.
 Within the method we&#8217;re defining, those pieces of information are called <strong>parameters</strong>.
 A parameter is a variable that exists in the method and receives the argument, and it&#8217;s declared inside the parentheses in our method definition.
 The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses&#8212;&#8203;but now let&#8217;s see an example with a parameter.</p>
@@ -580,7 +589,7 @@ In general, think about what information the method needs to do its job, and the
 <p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
 </div>
 <div class="paragraph">
-<p>If you <a href="b-sides-and-deep-cuts.html#_named_arguments">specify paramenter names</a> in a method call, the argument order doesn&#8217;t matter.</p>
+<p>If you <a href="deep-cuts.html#_named_arguments">specify paramenter names</a> in a method call, the argument order doesn&#8217;t matter.</p>
 </div>
 </div>
 </div>
@@ -590,7 +599,7 @@ In general, think about what information the method needs to do its job, and the
 <p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
 </div>
 <div class="paragraph">
-<p>You can <a href="b-sides-and-deep-cuts.html#_optional_arguments">define some parameters as optional</a>, which means you don&#8217;t have to provide an argument for them.</p>
+<p>You can <a href="deep-cuts.html#_optional_arguments">define some parameters as optional</a>, which means you don&#8217;t have to provide an argument for them.</p>
 </div>
 </div>
 </div>
@@ -675,7 +684,19 @@ For example, the following line of code is valid:</p>
 <p><code>int answer = 18 + GetFavNum();</code></p>
 </div>
 <div class="paragraph">
-<p>This evaluated the same way as any other assignment statement. It starts on the right and finds that method call, so it will execute <code>getFavNum()</code> and plug the returned value into the operation, resulting in <code>18 + 7</code> and ultimately evaluating to <code>25</code>, which is then assigned to <code>answer</code>.</p>
+<p>This evaluates the same way as any other assignment statement. It starts on the right and finds that method call, so it will execute <code>getFavNum()</code> and plug the returned value into the operation, resulting in <code>18 + 7</code> and ultimately evaluating to <code>25</code>, which is then assigned to <code>answer</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+C# has a clever thing called a <em>tuple</em> that lets us return multiple values from one method. But that&#8217;s beyond what we&#8217;ll be doing, so as far as we&#8217;re concerned a method can only return one piece of data, and it can only have one return type.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>A <code>return</code> statement in a <code>void</code> method stops execution of the method and returns to the calling method.</p>
@@ -698,27 +719,25 @@ For example, the following line of code is valid:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The second Write() statement won&#8217;t execute because the return statement ends the method. The compiler doesn&#8217;t like these kinds of <em>unreachable statements</em>, though, so it will not compile.</p>
+<p>The second <code>Write()</code> statement won&#8217;t execute because the return statement ends the method. The compiler doesn&#8217;t like these kinds of <em>unreachable statements</em>, though, so it will not compile.</p>
 </div>
 <div class="paragraph">
-<p><code>return</code> statements in <code>void</code> methods will have some uses for us later on.</p>
+<p><code>return</code> statements in <code>void</code> methods will have some uses for us later on, but that won&#8217;t involve return any data.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-C# offer a clever thing called a <em>tuple</em> that lets us return multiple values from one method. But that&#8217;s beyond what we&#8217;ll be doing, so as far as we&#8217;re concerned a method can only return one piece of data, and it can only have one return type.
-</td>
-</tr>
-</table>
+<div class="exampleblock callout dc">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
+</div>
+<div class="paragraph">
+<p>With your understanding of method returns and parameters, you can use <a href="deep-cuts.html#_nested_method_calls">Nested Method Calls</a> to simplify your code and reduce the number of variables you need to declare.</p>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_returning_vs_outputting">3.4.1. Returning vs. Outputting</h4>
 <div class="paragraph">
-<p>Generally speaking, it&#8217;s better to return values from a method rather than outputting values.
+<p>Generally speaking, it&#8217;s better to return a value from a method rather than outputting a value within the method.
 There are a few reasons for this, but consider an obvious one.
 If we use a <code>Write()</code> method, our code is limited to only working in a console application.
 That&#8217;s fine for now, because it&#8217;s the only kind of application we know how to make!
@@ -795,7 +814,7 @@ The solution is to return the string and perform the output in <code>Main()</cod
 </div>
 </div>
 <div class="paragraph">
-<p>This is another example of something that seems annoying, like it&#8217;s just extra work.
+<p>This is another example of something that seems annoying, like pointless extra work.
 When we&#8217;re learning new things, we sometimes have to accept the wisdom of people who are experienced&#8212;&#8203;and recognize that eventually we&#8217;ll see the point.
 We&#8217;re all about learning good habits and best practices around here, so we&#8217;ll almost always return values rather than printing them.</p>
 </div>
@@ -809,11 +828,11 @@ Notice that those kinds of methods in my examples have <em>print</em> or <em>out
 When I refer to <em>returning</em> something, I mean just that.
 The rule of thumb is, <strong>all input and output statements should be in the <code>Main()</code> method</strong> and data should be passed around as necessary.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 I strongly penalize input and output statements outside of the <code>Main()</code> method because I&#8217;m trying to build habits that will serve you well as you learn more about programming.
@@ -854,7 +873,7 @@ The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to
 <p>Consider a method that calculates the average age of two people:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.10 - The <code>AverageAge()</code> method, which calculates the average of two ages.</div>
+<div class="title">Example 3.10 - An <code>AverageAge()</code> method that calculates the average of two ages.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -872,15 +891,16 @@ Notice that the return statement uses <a href="_variables_and_data_types.html#_c
 </div>
 <div class="paragraph">
 <p>If we want to calculate an average age of 3 people, we could almost use the same method.
-We want a method that still calculates the average age, but takes three arguments and divides by 3, instead of 2.</p>
+We still want a method that calculates the average age, but one that takes three arguments and divides by 3, instead of 2.</p>
 </div>
 <div class="paragraph">
 <p>To create another version of a method that operates a little differently, we can use <em>method overloading</em>.
+Overloading a method means creating a new version of the method that has the same name&#8212;&#8203;and the same basic purpose&#8212;&#8203;but a different set of parameters.
 To overload a method, we write a new method with the same identifier, but with a different set of parameters.
-An overload for our <code>averageAge()</code> method could look like this:</p>
+An overload for our <code>AverageAge()</code> method could look like this:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.11 - Overloading <code>AverageAge()</code> to calculate the average of three ages.</div>
+<div class="title">Example 3.11 - An overload of <code>AverageAge()</code> that calculates the average of three ages.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -894,7 +914,7 @@ An overload for our <code>averageAge()</code> method could look like this:</p>
 </div>
 <div class="paragraph">
 <p>Note that the method identifier is exactly the same, but this version accepts three <code>int</code> arguments instead of two.
-That difference allows the compiler to easily determine which implementation of the method is being called: if there are two `int`s in the parenthesis, it calls the first implementation, and if there are three `int`s, it calls the second implementation.
+That difference allows the compiler to easily determine which implementation of the method is being called: if there are two <code>int</code> arguments in the method call, it uses the first implementation; if there are three <code>int</code> arguments, it calls the second implementation.
 When we&#8217;re using the method, we can call whichever best suits our needs at the time.</p>
 </div>
 <div class="paragraph">
@@ -902,7 +922,7 @@ When we&#8217;re using the method, we can call whichever best suits our needs at
 An implementation that accepts `double`s is valid:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 3.12 - Overloading <code>AverageAge()</code> to calculate the average of three ages, using <code>double</code> values.</div>
+<div class="title">Example 3.12 - An overload of <code>AverageAge()</code> that calculates the average of three ages, using <code>double</code> values.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -984,6 +1004,13 @@ The <em>names</em> of those parameters doesn&#8217;t differentiate them, so diff
 <p>The term we use to describe a method&#8217;s identifier and parameter list (the number, order and types of parameters) is a <em>method signature</em>.
 The method signature must be unique so the compiler can identify which method code to run.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_calling_overloaded_methods">3.5.2. Calling Overloaded Methods</h4>
+<div class="paragraph">
+<p>Once we have defined overloaded methods, we can call them just like any other method.
+We simply provide the arguments that match the method signature we want to use.</p>
+</div>
 <div class="listingblock">
 <div class="title">Example 3.14 - Testing three overloaded implementations of <code>AverageAge()</code>.</div>
 <div class="content">
@@ -1043,16 +1070,7 @@ The method signature must be unique so the compiler can identify which method co
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>Methods with Parameters and Returns</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/f08bKXVqxZk?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=2p2J7G8pz3U&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" class="bare">https://www.youtube.com/watch?v=2p2J7G8pz3U&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP</a>
-Solution file from video:</p>
+<p>Methods with Parameters and Returns [COMING SOON!]</p>
 </div>
 </div>
 </div>
@@ -1086,41 +1104,19 @@ Solution file from video:</p>
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Greet</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Greet</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name)</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">$&quot;Hello, {name}!&quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha">
-<li>
-<p>What does this method do?</p>
-</li>
-<li>
-<p>How would you call it to greet someone named "Brian Epstein"?</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>What would the following method return?</p>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AddTwoNumbers</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> a, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> b)</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> a </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> b;</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p>&#8230;&#8203;and how would you use that returned value?</p>
+<p>How would you call it to greet someone named "Brian Epstein"?</p>
 </div>
+</li>
+<li>
+<p>Why is it a good idea to define reusable code inside a method instead of copying and pasting it everywhere?</p>
 </li>
 <li>
 <p>Given the following code:</p>
@@ -1129,7 +1125,7 @@ Solution file from video:</p>
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AnnounceBand</span><span style="color: #f8f8f2">()</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AnnounceBand</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Ladies and gentlemen, The Beatles!&quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">}</span>
@@ -1147,6 +1143,12 @@ Solution file from video:</p>
 </ol>
 </div>
 </li>
+<li>
+<p>What happens if you define a method with a parameter but forget to provide an argument when you call it?</p>
+</li>
+<li>
+<p>What do we call the variable inside a method&#8217;s parentheses? How is it different from an argument?</p>
+</li>
 </ol>
 </div>
 </div>
@@ -1163,8 +1165,8 @@ Solution file from video:</p>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-24<br />
-        13:25:20 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-26<br />
+        19:40:01 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

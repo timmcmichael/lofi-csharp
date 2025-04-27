@@ -58,7 +58,7 @@
 </li>
 <li><a href="_liner_notes.html"><span class="toc-current">Liner Notes</span></a>
 <ul class="sectlevel2">
-<li><a href="_liner_notes.html#soundcheck-chapter">Getting Started Chapter</a>
+<li><a href="_liner_notes.html#soundcheck-chapter">Soundcheck</a>
 </li>
 <li><a href="_liner_notes.html#computers-and-coding">1. Computers and Coding</a>
 </li>
@@ -76,15 +76,15 @@
 </li>
 <li><a href="_liner_notes.html#arrays">8. Arrays</a>
 </li>
-<li><a href="_liner_notes.html#software-development-live-cycle">9. Software Development Life Cycle</a>
+<li><a href="_liner_notes.html#graphical-user-interfaces">9. Graphical User Interfaces</a>
 </li>
-<li><a href="_liner_notes.html#graphical-user-interfaces">10. Graphical User Interfaces</a>
+<li><a href="_liner_notes.html#testing">B-Side: Lo-Fi Testing</a>
 </li>
 <li><a href="_liner_notes.html#testing">B-Side: Lo-Fi Testing</a>
 </li>
 </ul>
 </li>
-<li><a href="b-sides-and-deep-cuts.html">Deep Cuts</a>
+<li><a href="deep-cuts.html">Deep Cuts</a>
 </li>
 <li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
@@ -112,7 +112,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>The review questions are intended to be a little open-ended, so your answers will vary from these.</p>
 </div>
 <div class="sect2">
-<h3 id="soundcheck-chapter">Getting Started Chapter</h3>
+<h3 id="soundcheck-chapter">Soundcheck</h3>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -224,7 +224,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </div>
 </li>
 <li>
-<p><em><strong>What happens if you try to store a word (like "hello") in a variable declared as int?</strong></em></p>
+<p><em><strong>What happens if you try to store a word (like "hello") in a variable declared as <code>int</code>?</strong></em></p>
 <p>The program will not compile. You can&#8217;t assign a value of one data type to a variable of another (incompatible) data type. You also can&#8217;t change the data type of a variable after you&#8217;ve declared it.</p>
 </li>
 <li>
@@ -303,7 +303,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>A method is a named block of code that does something — like a mini-program inside your program. You use methods to organize your code, avoid repetition, and make your program easier to understand and manage. (Like reusable LEGO chunks.)</p>
 </li>
 <li>
-<p><em><strong>What’s the difference between calling a method and defining a method?</strong></em></p>
+<p><em><strong>What&#8217;s the difference between calling a method and defining a method?</strong></em></p>
 <p>Defining a method is writing what the method does. Calling a method is telling it to actually run. You define once, but can call it as many times as you want.</p>
 </li>
 <li>
@@ -311,7 +311,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><code>void</code> means the method doesn&#8217;t return anything. It just does something, like printing text, but doesn&#8217;t give a value back.</p>
 </li>
 <li>
-<p><em><strong>Consider the code below. a. What does it do? b. How would you call it to greet someone named "Brian Epstein"?</strong></em></p>
+<p><em><strong>Consider the code below. How would you call it to greet someone named "Brian Epstein"?</strong></em></p>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
@@ -324,41 +324,13 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha">
-<li>
-<p>It prints a greeting using the name you give it.</p>
-</li>
-<li>
-<p><code>Greet("Brian Epstein");</code></p>
-</li>
-</ol>
+<div class="paragraph">
+<p>[source,csharp]Greet("Brian Epstein");</p>
 </div>
 </li>
 <li>
-<p><em><strong>Consider the code below. a. What would the method return? b. How would you use that returned value?</strong></em></p>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AddTwoNumbers</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> a, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> b)</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> a </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> b;</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha">
-<li>
-<p>It adds the two numbers and returns the result. So <code>AddTwoNumbers(2, 3)</code> would return 5.</p>
-</li>
-<li>
-<p>For example, you could store the result in a variable: <code>int total = AddTwoNumbers(4, 6);</code></p>
-</li>
-</ol>
-</div>
+<p><em><strong>Why is it a good idea to define reusable code inside a method instead of copying and pasting it everywhere?</strong></em></p>
+<p>Defining reusable code inside a method is better than copying and pasting because it makes your code cleaner, easier to read, and less error-prone. If you need to change the code later, you only have to do it in one place instead of everywhere you pasted it. It also ensures that each copy of the code does the same thing, reducing the chance of mistakes.</p>
 </li>
 <li>
 <p><em><strong>Consider the code below. a. Overload the method by accepting the name of a band to introduce. b. Demonstrate how to call each version of the method.</strong></em></p>
@@ -404,6 +376,14 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </li>
 </ol>
 </div>
+</li>
+<li>
+<p><em><strong>What happens if you define a method with a parameter but forget to provide an argument when you call it?</strong></em></p>
+<p>If you define a method with a parameter but forget to provide an argument when you call it, the program will not compile. The compiler will give an error because it expects an argument for the parameter.</p>
+</li>
+<li>
+<p><em><strong>What do we call the variable inside a method&#8217;s parentheses? How is it different from an argument?</strong></em></p>
+<p>The variable inside a method&#8217;s parentheses is called a <strong>parameter</strong>. It&#8217;s a placeholder for the value that will be passed to the method when it&#8217;s called. An <strong>argument</strong> is the actual value you provide when you call the method. For example, in <code>greet("Brian Epstein")</code>, "Brian Epstein" is the argument, and <code>name</code> in <code>greet(string name)</code> is the parameter.</p>
 </li>
 </ol>
 </div>
@@ -464,18 +444,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </div>
 </div>
 <div class="sect2">
-<h3 id="software-development-live-cycle">9. Software Development Life Cycle</h3>
-<div class="qlist qanda">
-<ol>
-<li>
-<p><em><strong>Q1</strong></em></p>
-<p>Answer</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="graphical-user-interfaces">10. Graphical User Interfaces</h3>
+<h3 id="graphical-user-interfaces">9. Graphical User Interfaces</h3>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -507,16 +476,38 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="testing">B-Side: Lo-Fi Testing</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What are the two main parts of a test case, and why is it important to define them before you start writing code?</strong></em></p>
+<p>A test case includes <strong>inputs</strong> (the data the program uses) and the <strong>expected output</strong> (the result the program should produce). Defining test cases before coding helps you understand the problem better and plan how your program will work, instead of just jumping in and hoping it all comes together.</p>
+</li>
+<li>
+<p><em><strong>Why is it not enough to test your program with just one set of inputs? Give an example of an “edge case” that might catch a bug.</strong></em></p>
+<p>One test case might only show that your code works in that specific situation. To be sure your program works in general, you need to test it with a variety of inputs, including unusual or tricky ones.</p>
+<div class="paragraph">
+<p>An example of an edge case: If you&#8217;re writing a program that determines if a person is old enough to vote, the input 17 should return "no"; 18 should return "yes".</p>
+</div>
+</li>
+<li>
+<p><em><strong>How can writing your test cases early help you figure out what variables or calculations your program will need?</strong></em></p>
+<p>Thinking through test cases makes you figure out the steps to solve the problem. It helps you see what data you need, what formulas you&#8217;ll use, and what your program should do at each stage. It&#8217;s like using the test cases to reverse-engineer your program before you even start coding.</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a> | ↑ Up: <a href="index.html">Lo-Fi C#: An Introduction to Coding</a> | Next: <a href="b-sides-and-deep-cuts.html">Deep Cuts</a> →</p>
+<p>← Previous: <a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a> | ↑ Up: <a href="index.html">Lo-Fi C#: An Introduction to Coding</a> | Next: <a href="deep-cuts.html">Deep Cuts</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-24<br />
-        13:25:20 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-26<br />
+        19:40:01 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

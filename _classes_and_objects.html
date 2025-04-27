@@ -74,7 +74,7 @@
 </li>
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
-<li><a href="b-sides-and-deep-cuts.html">Deep Cuts</a>
+<li><a href="deep-cuts.html">Deep Cuts</a>
 </li>
 <li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
@@ -95,7 +95,7 @@
 <p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
 </div>
 <div class="paragraph">
-<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark></p>
+<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Most noticeably (other than stuff that&#8217;s just missing) is the presence of placeholder links where I haven&#8217;t quite finished videos. Check back later for a more complete version.</mark></p>
 </div>
 </div>
 </div>
@@ -108,7 +108,7 @@
 <p>*</p>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/06%20Debugging%20and%20Generative%20AI" target="_blank" rel="noopener">GitHub</a>.</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/06%20Debugging%20and%20Generative%20AI" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -159,7 +159,7 @@ A class defines the <strong>attributes</strong> and <strong>behaviors</strong> o
 <div class="paragraph">
 <p>In OOP, our planning for a program starts by deciding what objects&#8212;&#8203;and therefore, what classes&#8212;&#8203;we&#8217;ll need in order to implement the functionality we want.
 To help organize our thinking, we&#8217;ll use a tool called a <strong>class diagram</strong>, which gives a visual representation of the classes and their relationships in our program.
-The format programmers use for class diagrams is called <em>Unified Modeling Language</em> (UM)).
+The format programmers use for class diagrams is called <em>Unified Modeling Language</em> (UML).
 The UML standards are extensive, and we&#8217;ll be using a simplified version in this course.</p>
 </div>
 <div class="paragraph">
@@ -169,7 +169,7 @@ The UML standards are extensive, and we&#8217;ll be using a simplified version i
 <div class="content">
 <img src="images/chapter6/ComicBookDiagram.png" alt="ComicBookDiagram" width="134" height="166">
 </div>
-<div class="title">Example 6.2 - A class diagram for a restaurant order</div>
+<div class="title">Example 6.2 - A class diagram for a comic book</div>
 </div>
 <div class="paragraph">
 <p>The top section of the diagram has the name of the class, which is <code>ComicBook</code>.</p>
@@ -234,7 +234,7 @@ But it&#8217;s a best practice&#8212;&#8203;and an important one&#8212;&#8203;so
 <div class="sect2">
 <h3 id="_defining_and_using_a_class">7.3. Defining and Using a Class</h3>
 <div class="paragraph">
-<p>We&#8217;ll look at a program to keep rudimentary swimming pool maintenance records; for a single day&#8217;s data, we&#8217;ll have a class called <code>PoolRecord</code>.</p>
+<p>We&#8217;ll look at a hypothetical program to keep rudimentary swimming pool maintenance records; for a single day&#8217;s data, we&#8217;ll have a class called <code>PoolRecord</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -271,11 +271,11 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 </dd>
 <dt class="hdlist1"><code>class</code> keyword</dt>
 <dd>
-<p>The keyword that tells Java we&#8217;re defining a class. It&#8217;s required. We&#8217;ll eventually be able to create different kinds of classes and OOP structures, but for now we&#8217;re just creating regular classes.</p>
+<p>The keyword that tells Java we&#8217;re defining a class. It&#8217;s required so that the compiler knows what it&#8217;s processing. We&#8217;ll eventually be able to create different kinds of classes and OOP structures, but for now we&#8217;re just creating regular classes.</p>
 </dd>
 <dt class="hdlist1"><strong>Class name</strong> (or <em>identifier</em>)</dt>
 <dd>
-<p>The name of the class, which should be a noun that describes the object the class represents&#8212;&#8203;and is singular, so there&#8217;s no <em>s</em> at the end. The identifier should start with a capital, with the first letter of each word capitalized (like <code>WeatherRecord</code>). This is similar to the <em>camelCase</em> naming convention we&#8217;ve been using for variables, and it&#8217;s the same convention we&#8217;ve been using for methods; it&#8217;s called <em>PascalCase</em>.</p>
+<p>The name of the class, which should be a noun that describes the object the class represents&#8212;&#8203;and is singular, so there&#8217;s no <em>s</em> at the end. The identifier should start with a capital letter, with the first letter of each word capitalized (like <code>WeatherRecord</code>). This is similar to the <em>camelCase</em> naming convention we&#8217;ve been using for variables, and it&#8217;s the same convention we&#8217;ve been using for methods; it&#8217;s called <em>PascalCase</em>.</p>
 </dd>
 </dl>
 </div>
@@ -324,7 +324,7 @@ Since a class will compile and run even if we leave off the <code>private</code>
 </div>
 </div>
 <div class="paragraph">
-<p>In our original class diagram, we indicated that the fields were private by using a <code>-</code> in front of the field name.</p>
+<p>In our original class diagram, we indicated that the fields were private by placing a <code>-</code> in front of the field name.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -354,7 +354,7 @@ So far, our methods have included the keyword <code>static</code>; we&#8217;ll l
 These <em>nonstatic</em> methods are called <strong>instance methods</strong>, and they are otherwise very similar to the <code>static</code> methods we&#8217;ve been using.</p>
 </div>
 <div class="paragraph">
-<p>Though there are exceptions, most of these instance methods will be <code>public</code>, so they can be accessed from other classes.
+<p>For now our instance methods will be <code>public</code>, so they can be accessed from other classes.
 Remember, the foundation of encapsulation is having <code>private</code> fields and <code>public</code> methods to permit interactions with that data.</p>
 </div>
 <div class="paragraph">
@@ -376,7 +376,7 @@ Because of that convention, another name for accessor methods is <strong>getters
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">getHighTemperature</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> highTemperature;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> highTemperature;</span>
 <span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
@@ -479,7 +479,7 @@ A rule of thumb for beginners: create <strong>getters</strong> for all of your f
 </table>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re paaying attention to what we&#8217;re doing here, you might be thinking that these setters really just give public access to the fields, which seems to go against the whole idea of encapsulation.
+<p>If you&#8217;re paying attention to what we&#8217;re doing here, you might be thinking that these setters really just give public access to the fields, which seems to go against the whole idea of encapsulation.
 That&#8217;s true for now, but only because we&#8217;re starting with some basic examples.
 As we get the hang of this OOP stuff, we&#8217;ll write more complex methods that can control <strong>how</strong> fields are changed&#8212;&#8203;for example, by using <code>if</code> statements checkto check that a new value is valid and won&#8217;t break anything.
 But for now, this is just another one of those frustrating rules that you just have to follow because your teacher is unreasonable.</p>
@@ -956,7 +956,7 @@ That can include having a parameterless constructor and one or more constructors
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, visit the_Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/06%20Debugging%20and%20Generative%20AI" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
+To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, visit the_Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/06%20Debugging%20and%20Generative%20AI" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
 </td>
 </tr>
 </table>
@@ -1096,8 +1096,8 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-24<br />
-        13:25:20 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-26<br />
+        19:40:01 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

@@ -130,5 +130,4 @@ mark {
 .callout.spin .content {
   color: var(--white) !important;
   background-color: var(--sidebarbackground) !important;
-  /* background-color: purple !important; */
 }
