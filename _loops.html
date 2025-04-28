@@ -197,7 +197,7 @@ It is a definite loop because, before the loop starts, it&#8217;s already known 
 <div class="paragraph">
 <p>One thing to be careful of when using a <code>while</code> loop is the possibility of creating an <em>infinite loop</em>.
 An infinite loop is a loop that repeats forever, because the condition that determines whether the loop should repeat is never false.
-Infinite loops are a common mistake for new programmers, and they can cause our program to hang or crash.</p>
+Infinite loops are a common mistake for new programmers, and they cause our program to hang or crash.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 5.2 - An infinite loop using <code>while</code></div>
@@ -226,7 +226,7 @@ The program will print out "Count is: 0" over and over again, forever.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Your IDE will have a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button&#8212;&#8203;the symbol for "stop". In most IDEs you can press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop a program.
+Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button&#8212;&#8203;the symbol for "stop". In most IDEs you can press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop a program.
 </td>
 </tr>
 </table>
@@ -325,7 +325,7 @@ The simple rule of thumb for now is: if we need to guarantee that the block of c
 <h3 id="_input_validation_with_loops">5.4. Input Validation with Loops</h3>
 <div class="paragraph">
 <p>A common use for indefinite loops is <em>input validation</em>.
-Input validation is the process of checking the data that a user inputs into a program to make sure it&#8217;s valid.
+Input validation is the process of checking the data a user inputs into a program to make sure it&#8217;s valid.
 For example, if a program displays a menu with three options, a loop could keep asking for a selection until the user enters one of the three choices.</p>
 </div>
 <div class="paragraph">
@@ -381,14 +381,14 @@ For example, if a program displays a menu with three options, a loop could keep 
 </div>
 </div>
 <div class="paragraph">
-<p>This snippet of a program will keep displaying the menu and asking for the user&#8217;s choice until the user enters a number between 1 and 4.</p>
+<p>This code will keep displaying the menu and asking for the user&#8217;s choice until the user enters a number between 1 and 4.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_for_loops">5.5. <code>for</code> Loops</h3>
 <div class="paragraph">
-<p>Definite loops are really common, especially when we learn about things like <em>arrays</em> later on, so C# provides a keyword that allows for a compact format to create that kind of loop: the <code>for</code> loop.
-The syntax of a <code>for</code> loop can be a little intimidating for new coders, but it really just combines into one line of code all three of the pieces we need for a loop: initializing a counter, checking the counter, and changing the counter.</p>
+<p>Definite loops are really common, especially when we learn about things like <em>arrays</em> later on, so C# provides a shorthand format to create that kind of loop: the <code>for</code> keyword.
+The syntax of a <code>for</code> loop can be a little intimidating for new coders, but it really just takes  all three of the pieces we need for a loop and combines them into one line of code: initializing a counter, checking the counter, and changing the counter.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 5.6 - A simple <code>for</code> loop.</div>
@@ -404,10 +404,41 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>for</code> loop has three parts, separated by semicolons:
-1. Initialize a counter. <em>Example:</em> <code>int count = 0</code>.
-2. A Boolean expression that determines if the loop should repeat. <em>Example:</em> <code>count &lt; 10</code>.
-3. Change the counter at the end of the iteration. <em>Example:</em> <code>count++</code>.</p>
+<p>The <code>for</code> loop has three parts, separated by semicolons:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">1.&#160;Initialization</dt>
+<dd>
+<p>Runs at the start of the loop; used to set a counter.</p>
+<div class="paragraph">
+<p><em>Example:</em></p>
+</div>
+<div class="paragraph">
+<p><code>int count = 0</code></p>
+</div>
+</dd>
+<dt class="hdlist1">2.&#160;Condition</dt>
+<dd>
+<p>Checked before each iteration; the loop stops when this returns <code>false</code>.</p>
+<div class="paragraph">
+<p><em>Example:</em></p>
+</div>
+<div class="paragraph">
+<p><code>count &lt; 10</code></p>
+</div>
+</dd>
+<dt class="hdlist1">3.&#160;Update</dt>
+<dd>
+<p>Runs after each iteration; used to update the counter.</p>
+<div class="paragraph">
+<p><em>Example:</em></p>
+</div>
+<div class="paragraph">
+<p><code>count++</code></p>
+</div>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>Once you get the hang of the syntax, the <code>for</code> loop is a really convenient way to create a definite loop.</p>
@@ -431,7 +462,8 @@ A well-written loop will execute the block of code as many times as necessary, a
 However, C# provides two statements that can be used to alter the flow of a loop: the <code>break</code> statement and the <code>continue</code> statement.</p>
 </div>
 <div class="paragraph">
-<p>Since they aren&#8217;t necessary for writing loops, I consider them optional: none of my assignments or quiz questions will require you to know them.</p>
+<p>Since they aren&#8217;t necessary for writing loops, I consider them optional: <strong>none of my assignments or quiz questions will require you to know them</strong>.
+While I think people should know them, I think beginners can live without them for now.</p>
 </div>
 <div class="paragraph">
 <p>The <code>break</code> statement is used to exit a loop early.
@@ -477,9 +509,6 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div class="paragraph">
 <p>However, they are beyond the scope of this course, which focuses on the fundamentals of C# programming.</p>
-</div>
-<div class="paragraph">
-<p>If you want to explore them, the textbook addresses nested loops in section 6.6 (page 220), and there are many great resources available on the web and YouTube.</p>
 </div>
 </div>
 <div class="sect2">
@@ -550,8 +579,8 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-26<br />
-        19:40:01 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-28<br />
+        06:20:43 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

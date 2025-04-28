@@ -151,7 +151,7 @@ If our grocery list has 5 items, the indexes of the items would be 0, 1, 2, 3, a
 <div class="sect2">
 <h3 id="_defining_and_using_arrays">8.2. Defining and Using Arrays</h3>
 <div class="paragraph">
-<p>In Java, arrays are objects, so they have to be created with the <code>new</code> keyword, and array identifiers use square brackets [] to specify array elements.</p>
+<p>In Java, arrays are objects, so they have to be created with the <code>new</code> keyword, and array identifiers use square brackets <code>[</code> and <code>]</code> to specify index numbers.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -166,7 +166,7 @@ Any time you see square brackets in Java, you&#8217;re dealing with an array.
 </table>
 </div>
 <div class="paragraph">
-<p>The following example shows how an array is declared and initialized:</p>
+<p>The syntax to declare and initialize an array is as follows.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -214,10 +214,11 @@ The element is just like any other variable, so we can use it in expressions, pa
 </div>
 </div>
 <div class="paragraph">
-<p>When using arrays, we have to be careful to stay within the <em>bounds</em> of the array.
+<p>When using arrays, we have to be careful to stay within the <em>bounds</em> of the array&#8212;&#8203;the upper and lower limits of the array indexes.
 If we try to access an element that doesn&#8217;t exist, we&#8217;ll get an <code>ArrayIndexOutOfBoundsException</code>.
 This is a runtime exception, so it won&#8217;t be caught by the compiler, and it will cause our program to crash.
-In all arrays, any index less than 0 or greater than or equal to the length of the array is out of bounds.
+The lower bound of an array is always zero, so any index less that 0 is out of bounds.
+The upper bound is always the length of the array minus one, so any index greater than or equal to the length of the array is out of bounds.
 In our grocery list example, any index greater than 4 would be out of bounds.</p>
 </div>
 <div class="sidebarblock timetowatch">
@@ -252,18 +253,18 @@ In our grocery list example, any index greater than 4 would be out of bounds.</p
 <div class="sect2">
 <h3 id="_traversing_arrays">8.3. Traversing Arrays</h3>
 <div class="paragraph">
-<p>Working with individual elements in an array can be useful, but to really see the power of arrays, you need loops.
+<p>Working with individual elements in an array can be useful, but to really see the power of arrays, we need loops.
 With a loop, we can easily move through an array and perform some task or operation on each element.
 For example, if we have an array of quiz scores, we could use a loop to add up all the scores and calculate the average.</p>
 </div>
 <div class="paragraph">
 <p>When we use a loop to go through an array, we are <em>traversing</em> the array.
+To traverse an array means to go through each element in the array, one at a time, and do something with it.
 We can use a traversal to put values into an array (which we call <em>populating</em> the array), to modify values in an array, or to read values from an array.
 We can also use a traversal to search for something within an array.</p>
 </div>
 <div class="paragraph">
-<p>Most of the time, we&#8217;ll use a simple <code>for</code> loop to traverse an array.
-The syntax for a <code>for</code> traversal is:</p>
+<p>Most of the time, we&#8217;ll use a simple <code>for</code> loop to traverse an array.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example of a <code>for</code> loop to traverse an array</div>
@@ -289,7 +290,7 @@ The syntax for a <code>for</code> traversal is:</p>
 We use a <code>for</code> loop to go through each element of the array and add it to the <code>sum</code> variable.
 Using a variable like <code>sum</code> to accumulate a value is a common pattern in programming, and we refer to such as variable as an <em>accumulator</em>.
 Notice that we declare and initialize it before the loop, and then we update it inside the loop.
-If we declare it inside the loop, it will be reset to zero each time the loop runs, and we won&#8217;t get the correct sum.
+If we declare it inside the loop, it will be reset to zero each time the loop body runs, and we won&#8217;t get the correct sum.
 It also wouldn&#8217;t be accessible outside of the loop due to its scope.</p>
 </div>
 <div class="admonitionblock note">
@@ -299,7 +300,7 @@ It also wouldn&#8217;t be accessible outside of the loop due to its scope.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-At this point, clever students point out that we could get the sum of the scores without using a loop at all, using the <code>Arrays</code> class from the <code>java.util</code> package. Sure, but since we&#8217;re learning about loops, that would defeat the point. My assignments for this chapter assess your ability to write loops, so you won&#8217;t get any points for code that doesn&#8217;t at least try to traverse the array.
+At this point, clever clever or resourceful students point out that we could get the sum of the scores without using a loop at all, using the <code>Arrays</code> class from the <code>java.util</code> package. Sure, but since we&#8217;re learning about loops, that would defeat the point. My assignments for this chapter assess your ability to write loops, so you won&#8217;t get any points for code that doesn&#8217;t at least try to traverse the array.
 </td>
 </tr>
 </table>
@@ -321,7 +322,7 @@ If we hard-coded the size of the array into the loop, we would have to change ou
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
 <span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
 <span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{ </span><span style="color: #959077">// Uh oh! What if we add another score?</span>
+<span style="color: #f8f8f2">{ </span><span style="color: #959077">// Uh oh! What if we decide to hold more scores?</span>
 <span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">}</span>
 <span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The sum of the scores is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum);</span>
@@ -442,7 +443,7 @@ However, it is less flexible than a traditional for loop: we can&#8217;t use it 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The for-each loop is optional. You can always use a traditional for loop to traverse an array, and you&#8217;ll need to know how to do that for the assignments in this chapter.
+The for-each loop is optional. You can always use a traditional for loop to traverse an array, and you&#8217;ll need to know how to do that for the assignments in this chapter. None of our assignments require the use of a for-each loop.
 </td>
 </tr>
 </table>
@@ -507,8 +508,8 @@ The for-each loop is optional. You can always use a traditional for loop to trav
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-26<br />
-        19:40:01 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-28<br />
+        06:20:43 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
