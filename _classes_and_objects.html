@@ -1022,7 +1022,7 @@ myConsole.WriteLine("Hello, World!"); // It's not necessary!</pre>
 <p>That would be a pain, so we&#8217;re glad that <code>WriteLine()</code> is <code>static</code>.</p>
 </div>
 <div class="paragraph">
-<p>In C#, when we create a <a href="_variables_and_data_types.html#_declaring_constants">constant</a> (using the <code>const</code> keyword), that constant is implicitly (automatically) static, so we don&#8217;t include the <code>static</code> keyword.
+<p>In C#, when we create a <a href="#_declaring_constants">constant</a> (using the <code>const</code> keyword), that constant is implicitly (automatically) static, so we don&#8217;t include the <code>static</code> keyword.
 When we put a constant in an object class, we&#8217;re creating a value that is shared by all objects created from the class.
 If we have a savings account class, a common example when learning OOP, we might have a constant for the interest rate.
 This would mean that every savings account would earn the same interest rate, which is often how banks work.</p>
@@ -1043,13 +1043,13 @@ This would mean that every savings account would earn the same interest rate, wh
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">SavingsAccount</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> INTEREST_RATE </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> InterestRate  </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">;</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #959077">// other fields and methods go here. See the repository for the complete code.</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AddInterest</span><span style="color: #f8f8f2">()</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        balance </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> balance </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> INTEREST_RATE;</span>
+<span style="color: #f8f8f2">        balance </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> balance </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> InterestRate;</span>
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">}</span>
@@ -1096,8 +1096,8 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-01<br />
-        06:59:17 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-05<br />
+        12:30:18 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

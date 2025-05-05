@@ -50,7 +50,7 @@
 </li>
 <li><a href="_variables_and_data_types.html#_strings">2.5. Strings</a>
 </li>
-<li><a href="_variables_and_data_types.html#_declaring_constants">2.6. Declaring Constants</a>
+<li><a href="_variables_and_data_types.html#_declaring_named_constants">2.6. Declaring Named Constants</a>
 </li>
 <li><a href="_variables_and_data_types.html#_outputting_variable_and_constant_values">2.7. Outputting Variable (and Constant) Values</a>
 </li>
@@ -490,9 +490,9 @@ Always remember that, in C#, single quotes <kbd>'</kbd> enclose a <code>char</co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_declaring_constants">2.6. Declaring Constants</h3>
+<h3 id="_declaring_named_constants">2.6. Declaring Named Constants</h3>
 <div class="paragraph">
-<p>A constant is similar to a variable, with two rules:</p>
+<p>A named constant is similar to a variable, with two rules:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -505,7 +505,7 @@ Always remember that, in C#, single quotes <kbd>'</kbd> enclose a <code>char</co
 </ol>
 </div>
 <div class="paragraph">
-<p>To create a constant, add the keyword <code>const</code> at the start of your statement, followed by the rest of a declaration and assignment statement you&#8217;d use for a variable.
+<p>To create a named constant (often just called a constant), add the keyword <code>const</code> at the start of your statement, followed by the rest of a declaration and assignment statement you&#8217;d use for a variable.
 So that people looking at your code can easily tell it&#8217;s a constant rather than a variable, it should be named with all capital letters, using the underscore character to separate words.</p>
 </div>
 <div class="listingblock">
@@ -513,14 +513,14 @@ So that people looking at your code can easily tell it&#8217;s a constant rather
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> VINYL_ALBUM_THICKNESS </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1.8</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> BRITISH_INVASION_YEAR </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1964</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> FAVORITE_CLASS </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;CIS162AD&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> VinylAlbumThickness </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1.8</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> BritishInvasionYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1964</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">const</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> FavoriteClass </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;CIS162AD&quot;</span><span style="color: #f8f8f2">;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>There are a few different reasons to use constants in your code. For now:</p>
+<p>There are a few different reasons to use named constants in your code. For now:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -542,7 +542,7 @@ So that people looking at your code can easily tell it&#8217;s a constant rather
 <div class="content">
 <div class="title">Interesting!</div>
 <div class="paragraph">
-<p>The naming convention used for C# constants is called <strong>snake case</strong>. More specifically, since it&#8217;s all caps, people refer to it as <strong>screaming snake case</strong>. Snake case with lowercase letters is the standard convention for variables in Python, among other languages.</p>
+<p>The naming convention used for named constants in C# is called <strong>Pascal Case</strong>. Like camel case, it uses capital letters to signify new words; but unlike camel Case, it also capitalizes the first word. In many languages, programmers identify constants in all caps with underscores between words, so you sometimes see that in C# as well.</p>
 </div>
 </div>
 </div>
@@ -1183,8 +1183,8 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-01<br />
-        06:59:17 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-05<br />
+        12:30:18 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

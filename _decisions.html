@@ -50,7 +50,7 @@
 </li>
 <li><a href="_decisions.html#_adding_an_else_block">4.3. Adding an <code>else</code> Block</a>
 </li>
-<li><a href="_decisions.html#_the_if_else_if_structure">4.4. The <code>if-else if</code> Structure</a>
+<li><a href="_decisions.html#_the_if_else_if_structure">4.4. The if-else-if Structure</a>
 </li>
 <li><a href="_decisions.html#_nested_if_else_statements">4.5. Nested <code>if-else</code> Statements</a>
 </li>
@@ -116,7 +116,7 @@
 <div class="paragraph">
 <p>Decisions, or <em>branching</em> gives our programs the ability to execute different code depending on what&#8217;s happening as it runs.
 At the core of decisions is the concept of <em>Boolean logic</em>, which is named after a 19th-century mathematician named George Boole.
-Boolean logic is the foundation of the <code>if</code> statements that will be the foundation of our branching code.</p>
+Boolean logic is the foundation of the <code>if</code> statements that will allow our programs to branch.</p>
 </div>
 </div>
 <div class="sect2">
@@ -128,7 +128,7 @@ To give our programs the ability to <em>branch</em> and execute different code b
 </div>
 <div class="paragraph">
 <p>In computer programming, a decision is made based on a <strong>Boolean expression</strong>, which is an expression that evaluates to either <code>true</code> or <code>false</code>.
-Think of them as questions that can be answered with a simple "yes" or "no".
+Think of Boolean expressions as questions that can be answered with a simple "yes" or "no".
 <em>Is this student&#8217;s GPA high enough to qualify for the scholarship? Has this cell phone customer used all of their data? Did the user type "exit"?</em></p>
 </div>
 <div class="paragraph">
@@ -163,7 +163,7 @@ These can be assigned to variables of type <code>bool</code>:</p>
 <div class="sect3">
 <h4 id="_comparison_operations">4.1.2. Comparison Operations</h4>
 <div class="paragraph">
-<p>Also known as <em>relational operations</em>, relational operations are expressions that compare two values.
+<p>Also known as <em>relational operations</em>, comparison operations are expressions that compare two values.
 You will remember them from math class. <em>Is <code>x</code> greater than <code>y</code>? Is <code>a</code> less than or equal to <code>10</code>? Is <code>c</code> equal to <code>d</code>?</em>
 Relational operators, like <a href="_variables_and_data_types.html#_math_calculations">arithmetic operators</a>, are <em>binary</em> operators that require two operands.
 In other words, we need two values to compare.
@@ -210,8 +210,8 @@ In C#, where we have to stick with stuff on our keyboard, we use the following s
 </tbody>
 </table>
 <div class="paragraph">
-<p>A relational operation will always evaluate to either <code>true</code> or <code>false</code>.
-We can store that result in a <code>boolean</code> variable, as shown below, and we&#8217;ll also learn how to use these expressions in <code>if</code> statements later in this chapter.</p>
+<p>A comparison operation will always evaluate to either <code>true</code> or <code>false</code>.
+We can store that result in a <code>bool</code> variable, as shown below, and we&#8217;ll also learn how to use these expressions in <code>if</code> statements later in this chapter.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 4.2 - Using comparison operators in C#</div>
@@ -258,8 +258,8 @@ In C#, we can test string equality with the <code>==</code> operator or the <cod
 <div class="sect2">
 <h3 id="_if_statements">4.2. <code>if</code> Statements</h3>
 <div class="paragraph">
-<p>The <code>if</code> statement is the most basic decision-making structure in C#.
-It allows us to execute a block of code only if a certain condition is true.</p>
+<p>The <code>if</code> statement is the basic decision-making structure in C#.
+It allows us to execute a block of code only if a specified condition is true.</p>
 </div>
 <div class="paragraph">
 <p>The syntax of an <code>if</code> statement is the keyword <code>if</code>, followed by a Boolean expression in parentheses, followed by a block of code in curly braces.
@@ -286,7 +286,7 @@ In either case the program will continue executing the next line of code after t
 </div>
 <div class="paragraph">
 <p>In this example, the <code>if</code> statement checks if the variable <code>age</code> is less than <code>21</code>.
-Since <code>20</code> is less than <code>21</code>, the Boolean expression evaluates to <code>true</code>, and the block of code inside the <code>if</code> statement (line 3) is executed&#8212;&#8203;and it prints "You can&#8217;t buy alcohol."
+Since <code>20</code> is less than <code>21</code>, the Boolean expression evaluates to <code>true</code>, and the block of code inside the <code>if</code> statement (lines 3 through 5) is executed&#8212;&#8203;and it prints "You can&#8217;t buy alcohol."
 The program then continues to the next line of code, which prints "Keep that in mind when you go to the store!"</p>
 </div>
 <div class="paragraph">
@@ -303,7 +303,7 @@ Line 5 will execute every time the program runs, regardless of the value of <cod
 <div class="paragraph">
 <p>An <code>if</code> statement simply determines whether or not to execute a single block of code.
 If we want to choose between two blocks of code, we can add an <code>else</code> block to the <code>if</code> statement.
-The syntax is simple: after the <code>if</code> block, add the keyword <code>else</code>, followed by a block of code in curly braces.</p>
+The syntax is straightforward: after the <code>if</code> block, add the keyword <code>else</code>, followed by a block of code in curly braces.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 4.4 - An <code>if-else</code> statement in C#.</div>
@@ -357,13 +357,13 @@ Basically, it&#8217;s an either-or situation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_if_else_if_structure">4.4. The <code>if-else if</code> Structure</h3>
+<h3 id="_the_if_else_if_structure">4.4. The if-else-if Structure</h3>
 <div class="paragraph">
 <p>The <code>if-else</code> structure is great for choosing between two blocks of code, but what if we have more than two options?
 To handle this, we can chain multiple <code>if-else</code> statements together.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.5 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing an <code>if-else if</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
+<div class="title">Example 4.5 - Use of an if-else if structure to select one option from many.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -389,72 +389,81 @@ To handle this, we can chain multiple <code>if-else</code> statements together.<
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">WeatherRecord</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #959077">// Fields</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> date;</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> highTemperature;</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> averageWindSpeed;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">35</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">36</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">37</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">38</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> trackNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
 
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetTempDescription</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.highTemperature </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Hot&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.highTemperature </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">70</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Warm&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.highTemperature </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">50</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Cool&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        } </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Cold&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+<span style="color: #f8f8f2">trackNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(input);</span>
+
+<span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Peter Piper&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;It&#39;s Tricky&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;My Adidas&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Walk This Way&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Is It Live&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Perfection&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Not found&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;Track #{trackNum} on side one of Raising Hell by Run D.M.C. is {songTitle}.&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In this example, the <code>GetDescription()</code> method will return a <code>string</code> that describes the weather based on the high temperature of the day.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If the high temperature is greater than <code>90</code>, the method will return "Hot".</p>
-</li>
-<li>
-<p>If the high temperature is greater than <code>70</code>, the method will return "Warm".</p>
-</li>
-<li>
-<p>If the high temperature is greater than <code>50</code>, the method will return "Cool".</p>
-</li>
-<li>
-<p>If the high temperature is <code>50</code> or less, the method will return "Cold".</p>
-</li>
-</ul>
+<p>In this example, the user inputs a track number and we use an if-else-if structure to output the song&#8217;s title.</p>
 </div>
 <div class="paragraph">
-<p>The code begins with the first statement, and if it evaluates to <code>true</code>, the corresponding block of code will execute.
-If the first statement evaluates to <code>false</code>, the program will move on to the next <code>else if</code> statement, and so on.
-Once a code block is executed, it will hit a <code>return</code> statement, which will exit the method and not evaluate any other blocks of code.
-Therefore, only one block of code will execute.
+<p>The code begins with the first statement, and if it evaluates to <code>true</code>, the corresponding block of code will execute&#8212;&#8203;setting the song title to "Peter Piper".
+If the first statement evaluates to <code>false</code>, the program will move on to the next <code>else if</code> statement and check that condition, and so on through all of the <code>else if</code> blocks.
+Once an expression evaluates to <code>true</code> and the corresponding code block is executed, the program will then jump to the first line of code <strong>after</strong> the end of the if-else if structure&#8212;&#8203;the <code>WriteLine()</code> statement.
+Only one block of code can execute.
 If the program gets through the entire structure without finding a <code>true</code> condition, it will execute the block of code in the <code>else</code> block, if one is present.</p>
 </div>
-<div class="paragraph">
-<p>If we&#8217;re looking at that code critically, we might notice that the <code>else</code> block is not strictly necessary.
-We could just put the <code>return "Cold";</code> statement at the end of the method, and it would work the same way.
-However, that depends on the logic of the <code>if-else if</code> structure and whether or not we&#8217;re using <code>return</code> statements in the blocks of code.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Interesting!</div>
-<div class="paragraph">
-<p>The above example shows one clever use of decisions in an object class. You&#8217;d think that a <code>GetDescription()</code> method would return the value of a field called <code>description</code>, but there is no field. Instead, it just uses a decision structure to return a description based on the <code>highTemperature</code> field.</p>
-</div>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As is often the case in programming, there are multiple ways to solve this problem. As we learn more (or if you have previous coding experience), you may find that you prefer a different way to write this code. That&#8217;s great, and is part of the fun of coding. But keep in mind that your instructor&#8217;s job is to assess your understanding of the concepts being taught. You can&#8217;t get points on an if-else-if assignment if you don&#8217;t use an if-else-if structure!
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>In summary, An <code>if-else if</code> structure can execute, at most, one block of code.
@@ -466,7 +475,17 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p><code>if-else if</code> Statements in C# [COMING SOON!]</p>
+<p>if-else-if Statements in C# [COMING SOON!]</p>
+</div>
+</div>
+</div>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
+</div>
+<div class="paragraph">
+<p>This is a good time to stop and try out what you&#8217;ve learned so far. The <em>Coding Practice</em> assignment for this chapter can be completed with the concepts covered to this point.</p>
 </div>
 </div>
 </div>
@@ -474,11 +493,11 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 <div class="sect2">
 <h3 id="_nested_if_else_statements">4.5. Nested <code>if-else</code> Statements</h3>
 <div class="paragraph">
-<p>If we want a block of code to execute only if two different conditions are met, we can place <code>if</code> statements inside of each other&#8212;&#8203;which is called <em>nesting</em>.
+<p>If we want a block of code to execute only if two different conditions are met, we can place <code>if</code> statements inside of each other, which is called <em>nesting</em>.
 Nested if statements check multiple conditions in a hierarchical way: if one condition is met, it will proceed and check the next condition; if the first condition is not met, it will skip the inner <code>if</code> block.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.6 - Basic structure of a nested <code>if-else</code> statement in C#.</div>
+<div class="title">Example 4.6 - Basic structure of a nested <code>if-else</code> statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -517,7 +536,7 @@ Nested if statements check multiple conditions in a hierarchical way: if one con
 The if-else structures within those blocks check the average wind speed and return an appropriate description.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.7 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing a nested <code>if-else</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
+<div class="title">Example 4.7 - Use of nested <code>if-else</code> statements to select one option from many.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -565,53 +584,105 @@ The if-else structures within those blocks check the average wind speed and retu
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">44</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">45</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">46</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">47</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> String </span><span style="color: #a6e22e">GetFullDescription</span><span style="color: #f8f8f2">()</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">47</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">48</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">49</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">50</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">51</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">52</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">53</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">54</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">55</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">56</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">57</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">58</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">59</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">60</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">61</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">62</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">63</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">64</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">65</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">66</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">67</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">68</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">69</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">70</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">71</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">72</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">73</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sideNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> trackNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Enter side number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+<span style="color: #f8f8f2">sideNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(input);</span>
+
+<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Enter track number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+<span style="color: #f8f8f2">trackNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(input);</span>
+
+<span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (sideNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.highTemperature </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.averageWindSpeed </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Hot and Windy&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Hot&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Peter Piper&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.highTemperature </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">70</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.averageWindSpeed </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Warm and Windy&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Warm&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;It&#39;s Tricky&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.highTemperature </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">50</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.averageWindSpeed </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Cool and Windy&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Cool&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;My Adidas&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
 <span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.averageWindSpeed </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Cold and Windy&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">else</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Cold&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">        }</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Walk This Way&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Is It Live&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Perfection&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (sideNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Hit It Run&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Raising Hell&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;You Be Illin&#39;&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Dumb Girl&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Son of Byford&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">else</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">if</span><span style="color: #f8f8f2"> (trackNum </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Proud to Be Black&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">else</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    songTitle </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Not found&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;Track #{trackNum} on side {sideNum} of Raising Hell by Run D.M.C. is {songTitle}.&quot;</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -732,6 +803,8 @@ The following code is a very common beginner mistake and will <strong>not</stron
 <p>This reads like "if the percentage is greater than or equal to 80 and less than 90," but the second part of the expression is not a complete Boolean expression.
 We need to include the variable name and the comparison operator on <strong>both</strong> sides of the <code>&amp;&amp;</code> operator.</p>
 </div>
+<div class="sect3">
+<h4 id="_the_not_operator">4.6.1. The NOT Operator</h4>
 <div class="paragraph">
 <p>The NOT operation is a little different, as it only takes one operand (making it a <em>unary</em> operator_, if you&#8217;re nerdy about words, like I am).
 It simply inverts the value of the operand.
@@ -755,11 +828,12 @@ If the operand is <code>false</code>, the NOT operation will evaluate to <code>t
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="_range_checking">4.6.1. Range Checking</h4>
+<h4 id="_range_checking">4.6.2. Range Checking</h4>
 <div class="paragraph">
 <p>There are a lot of situations where we might need to combine multiple conditions to make a decision, but one of the most common is <em>range checking</em>.
-Range checking means we want to see if a value is within a certain range.</p>
+Range checking means we want to see if a value is within a specified range.</p>
 </div>
 <div class="paragraph">
 <p>A common example of range checking is to convert a percentage grade to a letter grade.</p>
@@ -824,7 +898,7 @@ Range checking means we want to see if a value is within a certain range.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The AND operator <code>&amp;&amp;</code> used in this example means that in order to return <code>"B"</code>, for example, the percentage must be greater than or equal to <code>80</code> <em>and</em> less than <code>90</code>.
+<p>The AND operator <code>&amp;&amp;</code> used in this example means that in order to return <code>"B"</code>, for example, the percentage must be greater than or equal to <code>80</code> <em>and</em> the percentage must be less than <code>90</code>.
 If either of those conditions is not met, the program will move on to the next <code>else if</code> statement.</p>
 </div>
 </div>
@@ -833,7 +907,7 @@ If either of those conditions is not met, the program will move on to the next <
 <h3 id="_switch_statements">4.7. <code>switch</code> Statements</h3>
 <div class="paragraph">
 <p>C# includes a structure called a <code>switch</code> statement that can be used to choose between multiple options.
-It is essentially another way to write an <code>if-else if</code> structure, but it can be more readable and easier to write in some situations.
+It is essentially another way to write an if-else-if structure, but it can be more readable and easier to write in some situations.
 I generally consider <code>switch</code> structures to be optional&#8212;&#8203;you can complete all of the assignments in this course without using them&#8212;&#8203;but they are a useful tool to have in your programming toolbox.
 And since you see them often in code written by others, it&#8217;s good to know how they work.</p>
 </div>
@@ -953,8 +1027,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-01<br />
-        06:59:17 -0700<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-05<br />
+        12:30:18 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
