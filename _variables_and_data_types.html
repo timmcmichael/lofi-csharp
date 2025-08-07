@@ -86,6 +86,14 @@
 </li>
 <li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
 </li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
 </ul>
 </div>
 </div>
@@ -137,7 +145,7 @@
 <hr>
 <div class="paragraph">
 <p>It&#8217;s fun to create programs that display stuff on the screen, but that&#8217;s pretty limited.
-To start doing things that are more interesting&#8212;&#8203;and useful&#8212;&#8203;we&#8217;ll need to keep track of some information.
+To start doing things that are more interesting—and useful—we&#8217;ll need to keep track of some information.
 In computer programming, a piece of information is called <strong>data</strong>.</p>
 </div>
 <div class="paragraph">
@@ -166,7 +174,7 @@ In computer programming, a piece of information is called <strong>data</strong>.
 </div>
 </div>
 <div class="paragraph">
-<p>The only way to change what&#8217;s output is by editing that constant&#8212;&#8203;in the quotation marks&#8212;&#8203;in our source code, before we run the program.</p>
+<p>The only way to change what&#8217;s output is by editing that constant—in the quotation marks—in our source code, before we run the program.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -192,20 +200,20 @@ I encourage beginning students to think of a variable like a container, such as 
 </div>
 <div class="paragraph">
 <p>The container can hold one thing at a time.
-We can put coffee in it, or we can put water in it&#8212;&#8203;but we can&#8217;t put both.
+We can put coffee in it, or we can put water in it—but we can&#8217;t put both.
 If we start with coffee and decide we want to put water in there, the coffee gets dumped out and is gone forever.
 That&#8217;s fine, but we better make sure we don&#8217;t want the coffee anymore before we put something else in the mug.</p>
 </div>
 <div class="paragraph">
 <p>A variable works the same way.
-It can hold one value, and that value can vary&#8212;&#8203;remember, that&#8217;s where the name comes from&#8212;&#8203;but once it&#8217;s changed, that old value is lost.</p>
+It can hold one value, and that value can vary—remember, that&#8217;s where the name comes from—but once it&#8217;s changed, that old value is lost.</p>
 </div>
 <div class="paragraph">
 <p>I guess we could mix coffee and water, but then that&#8217;s really a new substance and we can&#8217;t get back our plain coffee (or our water).
 If we want to store coffee <strong>and</strong> water, we can do that by using two different containers.</p>
 </div>
 <div class="paragraph">
-<p>From a programming perspective&#8212;&#8203;rather than a coffee perspective&#8212;&#8203;a variable is a location in the computer&#8217;s memory where we can store a value.
+<p>From a programming perspective—rather than a coffee perspective—a variable is a location in the computer&#8217;s memory where we can store a value.
 In order to use that value, we have to know where to find it, so we give the memory location a name, technically called an <strong>identifier</strong>.</p>
 </div>
 <div class="imageblock right">
@@ -236,7 +244,7 @@ Placing data in that variable is referred to as <strong>assigning</strong> a val
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you have programming experience in Python or JavaScript, the idea of a data type might be new to you. In those languages, the interpreter determines the data type for you&#8212;&#8203;so you don&#8217;t have to specify it. It&#8217;s one reason I prefer to teach beginners using C# or Java, which teaches you how data types work.
+If you have programming experience in Python or JavaScript, the idea of a data type might be new to you. In those languages, the interpreter determines the data type for you—so you don&#8217;t have to specify it. It&#8217;s one reason I prefer to teach beginners using C# or Java, which teaches you how data types work.
 </td>
 </tr>
 </table>
@@ -292,7 +300,7 @@ There are a few rules that determine whether or not an identifier is valid:</p>
 <div class="paragraph">
 <p>In addition to those technical rules about identifier names, the convention in C# is to use descriptive names in "camel case" format, as described in the preceding video.
 Single-letter variable names, like <code>x</code> for a number, are fine in your math class, but are generally <strong>not</strong> okay when you&#8217;re coding.
-The expectation in my course is that your code will align with those conventions&#8212;&#8203;because that&#8217;s what industry people expect&#8212;&#8203;and you will lose points if you don&#8217;t.</p>
+The expectation in my course is that your code will align with those conventions—because that&#8217;s what industry people expect—and you will lose points if you don&#8217;t.</p>
 </div>
 </div>
 <div class="sect2">
@@ -308,7 +316,7 @@ As you may remember from your math class, an integer is a whole number; that is,
 </div>
 <div class="paragraph">
 <p>The most common numeric data types in C# are <code>int</code> for integers and <code>double</code> for floating-point numbers.
-You can get pretty far in programming just using those three, and in courses I teach you won&#8217;t need to use any other numeric data types&#8212;&#8203;but others do exist.</p>
+You can get pretty far in programming just using those three, and in courses I teach you won&#8217;t need to use any other numeric data types—but others do exist.</p>
 </div>
 <div class="paragraph">
 <p>Other data types for integers are <code>byte</code>, <code>short</code>, and <code>long</code>.
@@ -326,7 +334,7 @@ For example, a <code>byte</code> uses 8 bits of memory and can store a number be
 </div>
 <div class="paragraph">
 <p>Other floating-point data type in C# are <code>float</code> and <code>decimal</code>.
-'float' is called "single" in some programming languages, which helps understand where the name <code>double</code> comes from: <code>double</code> uses twice as much memory (64 bits) as a <code>float</code> or "single" (32 bits)--and therefore its range of values is twice as big. Be aware that to make a <code>float</code> number in C#, you have to add the letter F (in capital or lowercase form) at the end of the number.</p>
+'float' is called "single" in some programming languages, which helps understand where the name <code>double</code> comes from: <code>double</code> uses twice as much memory (64 bits) as a <code>float</code> or "single" (32 bits)—and therefore its range of values is twice as big. Be aware that to make a <code>float</code> number in C#, you have to add the letter F (in capital or lowercase form) at the end of the number.</p>
 </div>
 <div class="paragraph">
 <p>The <code>decimal</code> data type is slower and uses more memory than float or double, but it&#8217;s more precise.
@@ -356,7 +364,7 @@ It&#8217;s used for financial calculations and other situations where precision 
 <div class="paragraph">
 <p>The general rule in programming is to be as efficient with your resources (memory, storage, processing speed, network bandwidth, etc.) as possible.
 If you&#8217;re storing a person&#8217;s age, you don&#8217;t really need an <code>int</code>; nobody is going to be two million years old!
-A <code>byte</code> has plenty of room (up to 127) to store even the oldest person&#8217;s age, and it uses a fraction of the memory&#8212;&#8203;8 bits instead of 32.
+A <code>byte</code> has plenty of room (up to 127) to store even the oldest person&#8217;s age, and it uses a fraction of the memory—8 bits instead of 32.
 So I should be telling you to use a <code>byte</code> in this case.</p>
 </div>
 <div class="paragraph">
@@ -364,13 +372,13 @@ So I should be telling you to use a <code>byte</code> in this case.</p>
 </div>
 <div class="paragraph">
 <p>But I don&#8217;t worry about that stuff with beginning programmers for two reasons.
-First, it&#8217;s hard enough for a beginner to write programs that work&#8212;&#8203;so instead of asking you to deal with <em>all</em> of the numeric types, I just have you use <code>int</code> whenever you need a whole number, and <code>double</code> when you need something with a decimal.
+First, it&#8217;s hard enough for a beginner to write programs that work—so instead of asking you to deal with <em>all</em> of the numeric types, I just have you use <code>int</code> whenever you need a whole number, and <code>double</code> when you need something with a decimal.
 Second, these days even the wimpiest computer has waaaaaay more RAM than is needed by even the most complex program a beginner will write, so we don&#8217;t need to worry about it.</p>
 </div>
 <div class="paragraph">
 <p>But understand that this attitude is only a teaching and learning aid.
 It&#8217;s like saying we shouldn&#8217;t worry about the price of groceries because we have plenty of money.
-That might be true, but it&#8217;s good to be careful with your money&#8212;&#8203;and it&#8217;s irresponsible of me to tell you to just waste your money.</p>
+That might be true, but it&#8217;s good to be careful with your money—and it&#8217;s irresponsible of me to tell you to just waste your money.</p>
 </div>
 <div class="paragraph">
 <p>As you get more comfortable with programming, use your memory resources efficiently.
@@ -384,7 +392,7 @@ While you&#8217;re learning, just worry about getting your code to work.</p>
 <p>A <code>bool</code> variable has only two possible values: <code>true</code> and <code>false</code>.
 It&#8217;s useful for tracking information that is only one thing or the other.
 <em>Is U2 my favorite band?</em>
-The answer to that is either <code>true</code> or <code>false</code>--there is no other possibility.
+The answer to that is either <code>true</code> or <code>false</code>—there is no other possibility.
 <em>Does Julia have all of the Beatles albums?</em>
 Again, only two possible answers to that question; she either owns them or she doesn&#8217;t.</p>
 </div>
@@ -410,7 +418,7 @@ We&#8217;ll look at this "Boolean logic" in the chapter on <a href="_decisions.h
 <h3 id="_char_data_type">2.4. <code>char</code> Data Type</h3>
 <div class="paragraph">
 <p>If we want to store a single character, like a student&#8217;s letter grade or their first initial, we can use the <code>char</code> data type.
-<code>char</code> literals are created by putting a character in <strong>single quotes</strong>, and that character can be a letter, number, punctuation mark or symbol&#8212;&#8203;or some other weird stuff, too.</p>
+<code>char</code> literals are created by putting a character in <strong>single quotes</strong>, and that character can be a letter, number, punctuation mark or symbol—or some other weird stuff, too.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 2.4 - Character variable declarations in C#</div>
@@ -486,7 +494,7 @@ That data type is called <code>string</code>, because it strings together a bunc
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Always remember that, in C#, single quotes <kbd>'</kbd> enclose a <code>char</code> and double quotes <kbd>"</kbd> enclose a <code>string</code>. It&#8217;s easy to get them mixed up&#8212;&#8203;especially if you&#8217;re used to Python, where they are interchangeable&#8212;&#8203;but your code won&#8217;t compile if you mix them up.
+Always remember that, in C#, single quotes <kbd>'</kbd> enclose a <code>char</code> and double quotes <kbd>"</kbd> enclose a <code>string</code>. It&#8217;s easy to get them mixed up—especially if you&#8217;re used to Python, where they are interchangeable—but your code won&#8217;t compile if you mix them up.
 </td>
 </tr>
 </table>
@@ -528,7 +536,7 @@ So that people looking at your code can easily tell it&#8217;s a constant rather
 <div class="ulist">
 <ul>
 <li>
-<p>Constants improve readability&#8212;&#8203;they identify the purpose of a value within your code.</p>
+<p>Constants improve readability—they identify the purpose of a value within your code.</p>
 </li>
 <li>
 <p>Constants prevent writing code that accidentally changes a value that shouldn&#8217;t change.</p>
@@ -554,7 +562,7 @@ So that people looking at your code can easily tell it&#8217;s a constant rather
 <h3 id="_outputting_variable_and_constant_values">2.7. Outputting Variable (and Constant) Values</h3>
 <div class="paragraph">
 <p>Assigning a value to a variable or constant does not produce any output.
-If we want to display the output of a variable&#8212;&#8203;or a constant&#8212;&#8203;we just put the identifier in a <code>Write()</code> or <code>WriteLine()</code> statement without any quotation marks:</p>
+If we want to display the output of a variable—or a constant—we just put the identifier in a <code>Write()</code> or <code>WriteLine()</code> statement without any quotation marks:</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 2.7 - Basic variable output in C#</div>
@@ -661,7 +669,7 @@ Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 <p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
 </div>
 <div class="paragraph">
-<p>You can also insert variables into strings using the <a href="#_string_format_method">[_string_format_method]</a>, which uses a similar placeholder syntax.</p>
+<p>You can also insert variables into strings using the <a href="deep-cuts.html#_string_format_method"><code>string.Format()</code> Method</a>, which uses a similar placeholder syntax.</p>
 </div>
 </div>
 </div>
@@ -670,7 +678,7 @@ Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 <h4 id="_choosing_an_output_method">2.7.3. Choosing an Output Method</h4>
 <div class="paragraph">
 <p>For our purposes, there&#8217;s no difference between outputting using separate <code>Write()</code> statements, concatenation, or interpolation; you can use whichever approach you prefer.
-Most programmers end up using interpolation because it&#8217;s easy to write&#8212;&#8203;and easy to read.
+Most programmers end up using interpolation because it&#8217;s easy to write—and easy to read.
 It also lends itself well to formatting output, which means making the output look nice and readable; we don&#8217;t worry about that here, but eventually you&#8217;ll find it useful.</p>
 </div>
 <div class="paragraph">
@@ -734,7 +742,7 @@ In C#, there are five basic arithmetic operators:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The arithmetic operators work pretty much the way you&#8217;d expect, except maybe <em>modulo</em>--which might be a term you&#8217;ve never heard before.
+<p>The arithmetic operators work pretty much the way you&#8217;d expect, except maybe <em>modulo</em>—which might be a term you&#8217;ve never heard before.
 Each operator acts on the value to either side:</p>
 </div>
 <div class="listingblock">
@@ -906,12 +914,12 @@ On somebody&#8217;s birthday, for example, we could write:</p>
 </div>
 <div class="paragraph">
 <p>The <code>++</code> operator simply adds 1 to the current value of <code>age</code>.
-The <em>decrement operator</em> is <code>--</code>, and it subtracts 1 from a variable&#8217;s value.
+The <em>decrement operator</em> is <code>—</code>, and it subtracts 1 from a variable&#8217;s value.
 If we&#8217;re counting down the number of days until our next birthday, we could execute this expression each morning:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">daysRemaining</span><span style="color: #ff4689">--</span><span style="color: #f8f8f2">;</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">daysRemaining</span><span style="color: #ed007e; background-color: #1e0010">—</span><span style="color: #f8f8f2">;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -934,7 +942,7 @@ There are two forms to the increment and decrement operators: <strong>prefix</st
 <div class="sect2">
 <h3 id="_handling_user_input">2.9. Handling User Input</h3>
 <div class="paragraph">
-<p>Until now, our code hasn&#8217;t been interactive&#8212;&#8203;each execution of a program results in the exact same output, and the user never has the chance to input anything.
+<p>Until now, our code hasn&#8217;t been interactive—each execution of a program results in the exact same output, and the user never has the chance to input anything.
 To produce output, we&#8217;ve been using <code>Console.WriteLine</code> and <code>Console.Write</code> to display text on the screen.
 For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <code>Console.Read</code>).</p>
 </div>
@@ -952,7 +960,7 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 </div>
 </div>
 <div class="paragraph">
-<p><code>Console.ReadLine</code> only deals with <code>string</code> values; even if the user types in a number, it will be stored as a <code>string</code>--which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
+<p><code>Console.ReadLine</code> only deals with <code>string</code> values; even if the user types in a number, it will be stored as a <code>string</code>—which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 2.13 - Incorrect use of user input</div>
@@ -981,11 +989,11 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 <h4 id="_converting_data_types">2.9.1. Converting Data Types</h4>
 <div class="paragraph">
 <p>When we looked at arithmetic, we saw that data types are really important.
-For example, if we divide an <code>int</code> by another <code>int</code>, the result is an <code>int</code>--even if we stick that result in a <code>double</code> variable.
+For example, if we divide an <code>int</code> by another <code>int</code>, the result is an <code>int</code>—even if we stick that result in a <code>double</code> variable.
 And we learned that we can use a process called <em>type casting</em> to help switch between two numeric types.</p>
 </div>
 <div class="paragraph">
-<p>But we can&#8217;t just cast a <code>string</code> to numeric type because the <code>string</code> might not contain a number&#8212;&#8203;it might have letters and weird symbols.
+<p>But we can&#8217;t just cast a <code>string</code> to numeric type because the <code>string</code> might not contain a number—it might have letters and weird symbols.
 Instead, we need to use a method to convert the string to a number.</p>
 </div>
 <div class="paragraph">
@@ -1175,7 +1183,7 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sample answers provided in the <a href="_b_side_lo_fi_testing.html#variables-and-data-types">Liner Notes</a></em>.</p>
+<p><em>Sample answers provided in the <a href="_liner_notes.html#variables-and-data-types">Liner Notes</a></em>.</p>
 </div>
 </div>
 </div>
@@ -1186,8 +1194,8 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-15<br />
-        17:10:13 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-08-07<br />
+        03:17:46 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

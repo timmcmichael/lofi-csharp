@@ -78,6 +78,14 @@
 </li>
 <li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
 </li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
 </ul>
 </div>
 </div>
@@ -125,8 +133,8 @@
 </div>
 <hr>
 <div class="paragraph">
-<p>A computer is basically a device that executes a set of commands&#8212;&#8203;and does so very quickly.
-Because the guts of a computer (a CPU) are kinda like a bunch of light switches&#8212;&#8203;and I mean a <strong>BUNCH</strong> of light switches&#8212;&#8203;it can only deal with zeros and ones: a switch that is off is "zero," and a switch that&#8217;s on is "one."</p>
+<p>A computer is basically a device that executes a set of commands—and does so very quickly.
+Because the guts of a computer (a CPU) are kinda like a bunch of light switches—and I mean a <strong>BUNCH</strong> of light switches—it can only deal with zeros and ones: a switch that is off is "zero," and a switch that&#8217;s on is "one."</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -147,12 +155,12 @@ Never before has the concept of a modern computer been so recklessly simplified.
 <p>Imagine that your BFF is in your programming class, but that cruel professor won&#8217;t let you sit together.
 When the professor turns his back, you can use your fingers to send a quick message to your BFF.
 Holding up your index finger might mean, "meet me in the library after class;" two fingers could mean, "send me a copy of your homework."
-As long as you agree on what each number means, you could pass along commands or information&#8212;&#8203;it would be like your own little language.</p>
+As long as you agree on what each number means, you could pass along commands or information—it would be like your own little language.</p>
 </div>
 <div class="paragraph">
 <p>If you&#8217;re a sports fan, I have a better analogy.
 A quarterback and a coach could have a language based completely on numbers.
-The coach tells the quarterback "22" and the quarterback knows which play to run, because they&#8217;ve agreed on what instruction (play) the number 22 means&#8212;&#8203;and there are football teams that do exactly this.</p>
+The coach tells the quarterback "22" and the quarterback knows which play to run, because they&#8217;ve agreed on what instruction (play) the number 22 means—and there are football teams that do exactly this.</p>
 </div>
 <div class="paragraph">
 <p>Sending that number to the quarterback as a binary number would be a lot less efficient because the coach would have to say "10110" (which is the binary representation of twenty two) and the quarterback would have to know binary numbers,or have them written on his wrist-band thing as a cheatsheet.</p>
@@ -173,7 +181,7 @@ The quarterback could look over, see the pattern of helmets (10110) and run play
 </div>
 <div class="paragraph">
 <p>The chapters of this eBook are subtitled using binary to show basic examples of the numbering system: 0001 is, well, 1 in decimal.
-And 0100 is 4 in decimal. Learn a little more about <a href="#_binary_numbers_and_how_computers_work">binary numbers and how computers work</a>.</p>
+And 0100 is 4 in decimal. Learn a little more about <a href="deep-cuts.html#_binary_numbers_and_how_computers_work">binary numbers and how computers work</a>.</p>
 </div>
 </div>
 </div>
@@ -183,7 +191,7 @@ Let&#8217;s see&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p>Remember that a computer can execute commands super fast.
-Each command, or <strong>instruction</strong> (like a football play), is represented by a number&#8212;&#8203;a binary number, since that&#8217;s the number system the computer uses.
+Each command, or <strong>instruction</strong> (like a football play), is represented by a number—a binary number, since that&#8217;s the number system the computer uses.
 The collection of instructions the computer understands is called <strong>machine language</strong>.
 Incidentally, there are lots of different machine languages out there.
 Just like people in different cultures use different languages, different CPU types (<em>architectures</em>) use different languages.</p>
@@ -235,7 +243,7 @@ Clicking on the icon to open Microsoft Word runs a file that&#8217;s been compil
 </div>
 </div>
 <div class="paragraph">
-<p>Some programming languages don&#8217;t get translated ahead of time&#8212;&#8203;they get translated "on the fly," as the program is running.
+<p>Some programming languages don&#8217;t get translated ahead of time—they get translated "on the fly," as the program is running.
 That&#8217;s called <strong>interpreting</strong> instead of compiling, but it&#8217;s conceptually the same thing.</p>
 </div>
 <div class="paragraph">
@@ -255,14 +263,14 @@ In musical notation, a "sharp" raises a note by a half-step, so the name C# is s
 C# is an interesting case, because it&#8217;s both compiled <strong>and</strong> interpreted.</p>
 </div>
 <div class="paragraph">
-<p>It relies on a collection of tools called the <strong>Microsoft .NET Framework</strong>, or just ".NET"--and we pronounce that "dot net."
+<p>It relies on a collection of tools called the <strong>Microsoft .NET Framework</strong>, or just ".NET"—and we pronounce that "dot net."
 .NET includes a compiler translates our our source code into an intermediate language called <strong>Common Intermediate Language (CIL)</strong>.
 To execute the program, we use the <strong>Common Language Runtime (CLR)</strong> to interpret that CIL file as it executes.
 So. Many. Acronyms!</p>
 </div>
 <div class="paragraph">
 <p>There are a handful of reasons for this approach, but the most important one for us is that it makes C# a <strong>cross-platform</strong> language.
-A compiled language only works on a computer that "speaks" the same machine language, but if you compile your program to an intermediate language like CIL, it&#8217;ll run on any computer that has .NET (and the CLR)--and that will interpret the intermediate code as it executes.
+A compiled language only works on a computer that "speaks" the same machine language, but if you compile your program to an intermediate language like CIL, it&#8217;ll run on any computer that has .NET (and the CLR)—and that will interpret the intermediate code as it executes.
 So, Microsoft provides versions of .NET for Windows, macOS, and Linux, and the C# programs we create can run on any of them.
 This "write once, run anywhere" ability contributes greatly to C#'s popularity.</p>
 </div>
@@ -283,8 +291,8 @@ In addition to the compiler and runtime, .NET includes a handful of other techno
 </div>
 <div class="paragraph">
 <p>Because it&#8217;s based on the C language, C# has a lot in common with other C-based languages, like Java and JavaScript.
-If you have experience with Java, you&#8217;re going to find that C# is very similar&#8212;&#8203;in fact, it&#8217;s almost identical for the entry-level stuff we&#8217;ll be doing.
-And if you&#8217;re new to programming, you&#8217;ll find that the skills you learn here will translate well to other languages&#8212;&#8203;especially other C-based languages.
+If you have experience with Java, you&#8217;re going to find that C# is very similar—in fact, it&#8217;s almost identical for the entry-level stuff we&#8217;ll be doing.
+And if you&#8217;re new to programming, you&#8217;ll find that the skills you learn here will translate well to other languages—especially other C-based languages.
 Our goal here is to become <em>programmers</em>, not just <em>C# programmers</em>.</p>
 </div>
 </div>
@@ -299,7 +307,7 @@ Like Java (for those of you familiar with that), programs have to be organized i
 But in 2020, C# added a feature called <strong>top-level statements</strong> that allows us to write a program with just a few lines of code, which is a big improvement for a beginner.</p>
 </div>
 <div class="paragraph">
-<p>We do want to look at both the old way&#8212;&#8203;which I&#8217;ll refer to as a <em>traditional</em> program&#8212;&#8203;and top-level statements, because so many of the examples you&#8217;ll see online are written traditionally, and I want you to be able to understand them.
+<p>We do want to look at both the old way—which I&#8217;ll refer to as a <em>traditional</em> program—and top-level statements, because so many of the examples you&#8217;ll see online are written traditionally, and I want you to be able to understand them.
 And, as our programs become more complex, that traditional approach will keep our code organized and easier to understand.</p>
 </div>
 <div class="paragraph">
@@ -399,7 +407,7 @@ Don&#8217;t worry, before we&#8217;re done, you&#8217;ll understand and use all 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Since <code>Write</code> and <code>WriteLine</code> don&#8217;t exist in the file we created, we have to tell the compiler where to find them. We do that by prefixing the method name with <code>Console.</code>--more on this in future chapters!
+Since <code>Write</code> and <code>WriteLine</code> don&#8217;t exist in the file we created, we have to tell the compiler where to find them. We do that by prefixing the method name with <code>Console.</code>—more on this in future chapters!
 </td>
 </tr>
 </table>
@@ -408,7 +416,7 @@ Since <code>Write</code> and <code>WriteLine</code> don&#8217;t exist in the fil
 <div class="sect2">
 <h3 id="_basic_output">1.4. Basic Output</h3>
 <div class="paragraph">
-<p>The first programs we create in C# are <em>console</em> programs&#8212;&#8203;they are text-based programs that can&#8217;t really display any graphics.
+<p>The first programs we create in C# are <em>console</em> programs—they are text-based programs that can&#8217;t really display any graphics.
 To start with, we&#8217;ll use two basic ways to output text to the console: <code>Console.Write()</code> and <code>Console.WriteLine()</code> statements.
 <code>Write</code> outputs whatever text is in the parentheses, and we&#8217;ll need to put that text in quotation marks:</p>
 </div>
@@ -577,7 +585,7 @@ But if we want to see or use the code again down the road, it&#8217;s still ther
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;and in many, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
+Almost all IDEs have a keyboard shortcut for commenting out code—and in many, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
 </td>
 </tr>
 </table>
@@ -614,7 +622,7 @@ Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;an
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sample answers provided in the <a href="_b_side_lo_fi_testing.html#computers-and-coding">Liner Notes</a></em>.</p>
+<p><em>Sample answers provided in the <a href="_liner_notes.html#computers-and-coding">Liner Notes</a></em>.</p>
 </div>
 </div>
 </div>
@@ -625,8 +633,8 @@ Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;an
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-15<br />
-        17:10:13 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-08-07<br />
+        03:17:46 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

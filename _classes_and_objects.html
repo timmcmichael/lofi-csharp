@@ -78,6 +78,14 @@
 </li>
 <li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
 </li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
 </ul>
 </div>
 </div>
@@ -124,7 +132,7 @@ In this chapter, we&#8217;ll start dip our toes into OOP by learning about <em>c
 <div class="sect2">
 <h3 id="_oop_basics">7.1. OOP Basics</h3>
 <div class="paragraph">
-<p>There&#8217;s nothing wrong with procedural programming&#8212;&#8203;and, in fact, OOP is a form of procedural programming&#8212;&#8203;but it can get cumbersome as a program grows in size and complexity. And, it isn&#8217;t always an intuitive way to plan our programs.</p>
+<p>There&#8217;s nothing wrong with procedural programming—and, in fact, OOP is a form of procedural programming—but it can get cumbersome as a program grows in size and complexity. And, it isn&#8217;t always an intuitive way to plan our programs.</p>
 </div>
 <div class="paragraph">
 <p>Object-oriented programming lets us think about programs the way we think about the world around us.
@@ -139,8 +147,8 @@ As an example, the old-school video game <a href="https://en.wikipedia.org/wiki/
 </div>
 <div class="paragraph">
 <p>If we decide to create Pac-Man, we&#8217;ll still be using methods, but they won&#8217;t be the basic building blocks of our programs.
-Instead, we&#8217;ll be organizing our programs into <strong>classes</strong>, which are blueprints&#8212;&#8203;or recipes&#8212;&#8203;for creating objects.
-A class defines the <strong>attributes</strong> and <strong>behaviors</strong> of the objects&#8212;&#8203;and those are the variables and methods we&#8217;ll write to create our programs.</p>
+Instead, we&#8217;ll be organizing our programs into <strong>classes</strong>, which are blueprints—or recipes—for creating objects.
+A class defines the <strong>attributes</strong> and <strong>behaviors</strong> of the objects—and those are the variables and methods we&#8217;ll write to create our programs.</p>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -160,7 +168,7 @@ A class defines the <strong>attributes</strong> and <strong>behaviors</strong> o
 <div class="sect3">
 <h4 id="_class_diagrams">7.1.1. Class Diagrams</h4>
 <div class="paragraph">
-<p>In OOP, our planning for a program starts by deciding what objects&#8212;&#8203;and therefore, what classes&#8212;&#8203;we&#8217;ll need in order to implement the functionality we want.
+<p>In OOP, our planning for a program starts by deciding what objects—and therefore, what classes—we&#8217;ll need in order to implement the functionality we want.
 To help organize our thinking, we&#8217;ll use a tool called a <strong>class diagram</strong>, which gives a visual representation of the classes and their relationships in our program.
 The format programmers use for class diagrams is called <em>Unified Modeling Language</em> (UML).
 The UML standards are extensive, and we&#8217;ll be using a simplified version in this course.</p>
@@ -178,14 +186,14 @@ The UML standards are extensive, and we&#8217;ll be using a simplified version i
 <p>The top section of the diagram has the name of the class, which is <code>ComicBook</code>.</p>
 </div>
 <div class="paragraph">
-<p>The next section is for the attributes of the class&#8212;&#8203;the information the class will store. This example has attributes for the title of the comic book, the issue number, and the price.</p>
+<p>The next section is for the attributes of the class—the information the class will store. This example has attributes for the title of the comic book, the issue number, and the price.</p>
 </div>
 <div class="paragraph">
 <p>The bottom section is for the behaviors of the class, which are the actions the class can perform (or that we can do with the class).
 With a comic book, we might sell it to a customer, buy it from a customer, or print a receipt.</p>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll learn more about the symbols and conventions of UML as we go along, but for now the important part is that we can use class diagrams to help us plan our programs&#8212;&#8203;and to talk about OOP concepts without bogging down on code details.</p>
+<p>We&#8217;ll learn more about the symbols and conventions of UML as we go along, but for now the important part is that we can use class diagrams to help us plan our programs—and to talk about OOP concepts without bogging down on code details.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -206,7 +214,7 @@ Your Canvas course includes access to <strong>Lucid (Whiteboard)</strong>, which
 <div class="paragraph">
 <p>Object-oriented programming is all about creating objects that can interact with each other.
 Since the objects will be interacting, we need to think about how to keep them from interfering with each other in ways we don&#8217;t want.
-If we have a <code>ComicBook</code> class in a program used by a shop, we don&#8217;t want some other class to change attributes in a way that disrupts the program&#8212;&#8203;like setting the price to zero, or making the issue number a negative number, for example.</p>
+If we have a <code>ComicBook</code> class in a program used by a shop, we don&#8217;t want some other class to change attributes in a way that disrupts the program—like setting the price to zero, or making the issue number a negative number, for example.</p>
 </div>
 <div class="paragraph">
 <p>To prevent this kind of tampering, whether it&#8217;s intentional or accidental, OOP relies on a concept called <strong>encapsulation</strong>.
@@ -228,7 +236,7 @@ We&#8217;ve encapsulated our personal information, and we only share it when and
 </td>
 <td class="content">
 In C#, encapsulation is not a strict requirement, and our code will still work if we don&#8217;t use it.
-But it&#8217;s a best practice&#8212;&#8203;and an important one&#8212;&#8203;so we will encapsulate all of our classes in this course.
+But it&#8217;s a best practice—and an important one—so we will encapsulate all of our classes in this course.
 </td>
 </tr>
 </table>
@@ -278,7 +286,7 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 </dd>
 <dt class="hdlist1"><strong>Class name</strong> (or <em>identifier</em>)</dt>
 <dd>
-<p>The name of the class, which should be a noun that describes the object the class represents&#8212;&#8203;and is singular, so there&#8217;s no <em>s</em> at the end. The identifier should start with a capital letter, with the first letter of each word capitalized (like <code>WeatherRecord</code>). This is similar to the <em>camelCase</em> naming convention we&#8217;ve been using for variables, and it&#8217;s the same convention we&#8217;ve been using for methods; it&#8217;s called <em>PascalCase</em>.</p>
+<p>The name of the class, which should be a noun that describes the object the class represents—and is singular, so there&#8217;s no <em>s</em> at the end. The identifier should start with a capital letter, with the first letter of each word capitalized (like <code>WeatherRecord</code>). This is similar to the <em>camelCase</em> naming convention we&#8217;ve been using for variables, and it&#8217;s the same convention we&#8217;ve been using for methods; it&#8217;s called <em>PascalCase</em>.</p>
 </dd>
 </dl>
 </div>
@@ -295,7 +303,7 @@ A field is unique to the object; if we make two objects from our <code>WeatherRe
 </div>
 <div class="paragraph">
 <p>Fields are declared like our other variables, but they are encapsulated using the <code>private</code> access modifier.
-This means that the fields can only be accessed and changed by the methods of the class, not by other classes&#8212;&#8203;which controls how the data is used and prevents accidental or invalid changes.</p>
+This means that the fields can only be accessed and changed by the methods of the class, not by other classes—which controls how the data is used and prevents accidental or invalid changes.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -343,8 +351,8 @@ Since a class will compile and run even if we leave off the <code>private</code>
 <p>You might remember from <a href="_methods.html#_variable_scope">the section on variable scope in Chapter 0011</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
 And these fields look an awful lot like global variables.
 But fields in a class are <strong>not</strong> global variables; they&#8217;re <strong>instance</strong> variables, and that&#8217;s a good thing.
-The fields are <strong>encapsulated</strong>, so they can only be accessed and changed by the methods of the class&#8212;&#8203;which is also good thing.
-And the fields are unique to each object, so we can have multiple objects with different values for the fields&#8212;&#8203;which is yet another a good thing.
+The fields are <strong>encapsulated</strong>, so they can only be accessed and changed by the methods of the class—which is also good thing.
+And the fields are unique to each object, so we can have multiple objects with different values for the fields—which is yet another a good thing.
 And so no puppies' toys will be harmed as long as we use <strong>private</strong> fields correctly.</p>
 </div>
 </div>
@@ -352,7 +360,7 @@ And so no puppies' toys will be harmed as long as we use <strong>private</strong
 <h4 id="_methods_2">7.3.2. Methods</h4>
 <div class="paragraph">
 <p>Ensuring that our fields are <code>private</code> is the first step in encapsulating our class, but it&#8217;s not the only step.
-We also need to create methods that can access and change the fields&#8212;&#8203;otherwise, the fields are useless.
+We also need to create methods that can access and change the fields—otherwise, the fields are useless.
 So far, our methods have included the keyword <code>static</code>; we&#8217;ll learn more about that shortly, but when we make methods for an OOP class, we&#8217;ll leave off that <code>static</code> keyword.
 These <em>nonstatic</em> methods are called <strong>instance methods</strong>, and they are otherwise very similar to the <code>static</code> methods we&#8217;ve been using.</p>
 </div>
@@ -446,7 +454,7 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 <div class="paragraph">
 <p>Mutator methods change the fields of the class.
 Though they sometimes return a value, their primary purpose is to change the value of a field and they often have a <code>void</code> return type.
-As we&#8217;re getting the hang of this OOP thing, we&#8217;ll create a lot of mutator methods that are just <strong>setters</strong>--methods that set the value of a field.
+As we&#8217;re getting the hang of this OOP thing, we&#8217;ll create a lot of mutator methods that are just <strong>setters</strong>—methods that set the value of a field.
 The naming convention for setters is to start with <code>set</code> and then the name of the field they change, formatted in camelCase; they usually have a void return type.</p>
 </div>
 <div class="listingblock">
@@ -476,7 +484,7 @@ But we really should only write setters for fields that we want to be able to ch
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-A rule of thumb for beginners: create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I don&#8217;t deduct points for writing unnecessary setters&#8212;&#8203;but sometimes my directions will explicitly tell you not to write a setter for a field, and I do deduct for that.
+A rule of thumb for beginners: create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I don&#8217;t deduct points for writing unnecessary setters—but sometimes my directions will explicitly tell you not to write a setter for a field, and I do deduct for that.
 </td>
 </tr>
 </table>
@@ -484,7 +492,7 @@ A rule of thumb for beginners: create <strong>getters</strong> for all of your f
 <div class="paragraph">
 <p>If you&#8217;re paying attention to what we&#8217;re doing here, you might be thinking that these setters really just give public access to the fields, which seems to go against the whole idea of encapsulation.
 That&#8217;s true for now, but only because we&#8217;re starting with some basic examples.
-As we get the hang of this OOP stuff, we&#8217;ll write more complex methods that can control <strong>how</strong> fields are changed&#8212;&#8203;for example, by using <code>if</code> statements checkto check that a new value is valid and won&#8217;t break anything.
+As we get the hang of this OOP stuff, we&#8217;ll write more complex methods that can control <strong>how</strong> fields are changed—for example, by using <code>if</code> statements checkto check that a new value is valid and won&#8217;t break anything.
 But for now, this is just another one of those frustrating rules that you just have to follow because your teacher is unreasonable.</p>
 </div>
 <div class="listingblock">
@@ -709,7 +717,7 @@ And in those cases, we often see "test" or "demo"; so a driver class for our <co
 </div>
 <div class="paragraph">
 <p>The point here is that, if we&#8217;ve created an object class called <code>WeatherRecord</code>, we&#8217;re not going to put our <code>Main()</code> method in that same class/file.
-We&#8217;re going to make a separate class&#8212;&#8203;a driver, or demo class, or test class.
+We&#8217;re going to make a separate class—a driver, or demo class, or test class.
 I don&#8217;t much care what term you use, as long as it&#8217;s a separate class.</p>
 </div>
 <div class="paragraph">
@@ -729,9 +737,9 @@ I decided it was too creepy to display in the text, but this crime against natur
 </div>
 <div class="paragraph">
 <p>Why can&#8217;t we put input/output in our object classes?
-* To "decouple" the UI from the <em>business logic</em> or guts of our program. This makes our code reusable in a variety of projects, such as web pages, mobile apps, and GUI applications&#8212;&#8203;none of which are friendly to console input and output. Look up MVC and MVVM for all kinds of information about that.
+* To "decouple" the UI from the <em>business logic</em> or guts of our program. This makes our code reusable in a variety of projects, such as web pages, mobile apps, and GUI applications—none of which are friendly to console input and output. Look up MVC and MVVM for all kinds of information about that.
 * To keep our code more readable by keeping the parts clearly identifiable.
-* Because I just don&#8217;t care much about input and output. I care about the classes you create, so I want to look at (and grade) that work separately. If your input and output don&#8217;t work but your object class looks good, you&#8217;re still going to get a good grade&#8212;&#8203;if I&#8217;m able to separate out those mistakes.</p>
+* Because I just don&#8217;t care much about input and output. I care about the classes you create, so I want to look at (and grade) that work separately. If your input and output don&#8217;t work but your object class looks good, you&#8217;re still going to get a good grade—if I&#8217;m able to separate out those mistakes.</p>
 </div>
 <div class="paragraph">
 <p>Unfortunately, this is one of those things that boils down to, "because I said so" and "you&#8217;ll thank me later."
@@ -822,7 +830,7 @@ In general, I ask students to create at least two instances of each class they a
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to this point. You might choose to complete that work now, then move onto the next section&#8212;&#8203;which you&#8217;ll need for the Programming Project.
+The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to this point. You might choose to complete that work now, then move onto the next section—which you&#8217;ll need for the Programming Project.
 </td>
 </tr>
 </table>
@@ -841,7 +849,7 @@ The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to
 <div class="paragraph">
 <p>This is a call to a special method called a <strong>constructor</strong>.
 A constructor runs when an object is instantiated, and it&#8217;s used to set up the object with any initial values or behaviors.
-A constructor&#8217;s primary job is to initialize the fields of the object&#8212;&#8203;to give each instance variable a value.
+A constructor&#8217;s primary job is to initialize the fields of the object—to give each instance variable a value.
 If we don&#8217;t write a constructor, the compiler will create one for us; it&#8217;s called a default constructor, and it will set all fields to their default values.
 For example, numeric fields like <code>int</code> and <code>double</code> will be set to zero, and <code>string</code> fields will be set to <code>null</code>.
 We&#8217;ve been using setters to change those initial values to what we want, but we can also write our own constructors to set those values when the object is created.</p>
@@ -949,7 +957,7 @@ And it also violates guidance I gave you when we learned about <a href="_methods
 </ol>
 </div>
 <div class="paragraph">
-<p>We can also <a href="_methods.html#_overloading_a_method">overload</a> constructors, which means we can have multiple constructors with different parameters&#8212;&#8203;just like we can with any other method.
+<p>We can also <a href="_methods.html#_overloading_a_method">overload</a> constructors, which means we can have multiple constructors with different parameters—just like we can with any other method.
 That can include having a parameterless constructor and one or more constructors with parameters, or having multiple constructors with different numbers of parameters.</p>
 </div>
 <div class="admonitionblock note">
@@ -1000,7 +1008,7 @@ Instance methods are the code that an object can run, and they can access and ch
 Instance members are defined <strong>without</strong> using the <code>static</code> keyword, so we refer to them as <em>nonstatic</em> members.</p>
 </div>
 <div class="paragraph">
-<p>When we use the <code>static</code> keyword, we&#8217;re creating a <em>class member</em>--a field or method that belongs to the class itself, not to any object created from the class.
+<p>When we use the <code>static</code> keyword, we&#8217;re creating a <em>class member</em>—a field or method that belongs to the class itself, not to any object created from the class.
 Put another way, a class member is shared by all objects created from the class, and it can be accessed without even creating an object.</p>
 </div>
 <div class="paragraph">
@@ -1088,7 +1096,7 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sample answers provided in the <a href="_b_side_lo_fi_testing.html#classes-and-objects">Liner Notes</a></em>.</p>
+<p><em>Sample answers provided in the <a href="_liner_notes.html#classes-and-objects">Liner Notes</a></em>.</p>
 </div>
 </div>
 </div>
@@ -1099,8 +1107,8 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-15<br />
-        17:10:13 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-08-07<br />
+        03:17:46 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

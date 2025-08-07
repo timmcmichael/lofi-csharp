@@ -80,6 +80,14 @@
 </li>
 <li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
 </li>
+<li><a href="_b_side_lo_fi_software_development.html">B-Side: Lo-Fi Software Development</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="deep-cuts.html">Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
 </ul>
 </div>
 </div>
@@ -166,8 +174,8 @@ We also say that we <em>call</em> a method, which sounds a little cooler than <e
 <div class="sect2">
 <h3 id="_defining_our_own_methods">3.1. Defining Our Own Methods</h3>
 <div class="paragraph">
-<p>We&#8217;ve been defining a method from the start&#8212;&#8203;or, more likely, the compiler has been defining one for us.
-The .NET runtime&#8212;&#8203;which takes the compiler version of our code and executes it&#8212;&#8203;looks for a method called <code>Main</code>, and that&#8217;s where it starts running the code.
+<p>We&#8217;ve been defining a method from the start—or, more likely, the compiler has been defining one for us.
+The .NET runtime—which takes the compiler version of our code and executes it—looks for a method called <code>Main</code>, and that&#8217;s where it starts running the code.
 If we&#8217;re using <a href="_computers_and_coding.html#_first_c_program">top-level statements</a>, the compiler creates that <code>Main</code> method for us; if we&#8217;re using the traditional approach, we&#8217;ve defined <code>Main</code> in our code.</p>
 </div>
 <div class="paragraph">
@@ -251,11 +259,11 @@ In C#, parentheses <strong>always</strong> indicate a method, whether or not the
 <h3 id="_variable_scope">3.2. Variable Scope</h3>
 <div class="paragraph">
 <p>As we begin organizing our code into different methods and (when we learn <a href="#_0111_classes_and_objects">object-oriented programming basics</a>) classes, we&#8217;ll need to understand how data is compartmentalized within a program.
-Whenever we create a class or method&#8212;&#8203;and other structures we&#8217;ll learn as we go&#8212;&#8203;we use curly braces to define the boundaries, and we use indenting to help make those boundaries clear.
+Whenever we create a class or method—and other structures we&#8217;ll learn as we go—we use curly braces to define the boundaries, and we use indenting to help make those boundaries clear.
 These braces form <em>code blocks</em>.</p>
 </div>
 <div class="paragraph">
-<p>The outermost code block is our class&#8212;&#8203;again, that&#8217;s created by the compiler if we&#8217;re using top-level statements.
+<p>The outermost code block is our class—again, that&#8217;s created by the compiler if we&#8217;re using top-level statements.
 Although there are a few things that can go outside the class, like when we need to import outside code to use, the class code block contains all of the components of our program.</p>
 </div>
 <div class="paragraph">
@@ -329,7 +337,7 @@ Shadowing is a <strong>very</strong> bad practice, because it often leads to con
 When <code>OutputNumber()</code> is called, another variable named <code>numberOfSongs</code> is created and assigned the value <code>18</code>.
 After that is output, an assignment statement changes that value to <code>10</code>.
 Then, program execution returns to <code>Main()</code>, where a <code>WriteLine()</code> statement outputs <code>numberOfSongs</code> again.
-However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10&#8212;&#8203;the other one was.</p>
+However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10—the other one was.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.3 - Variable shadowing, which we should avoid.</div>
@@ -397,7 +405,7 @@ However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10&#82
 <h4 id="_global_variables">3.2.2. Global Variables</h4>
 <div class="paragraph">
 <p>As you can see, variable scope has a big impact on how our code runs.
-Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class&#8212;&#8203;inclusing all of the methods the class encloses.
+Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class—inclusing all of the methods the class encloses.
 This kind of class-level variable is sometimes called a <em>global variable</em>, and the use of global variables is generally discouraged.</p>
 </div>
 <div class="listingblock">
@@ -465,7 +473,7 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices&#8212;&#8203;and that means we don&#8217;t use global variables.
+The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices—and that means we don&#8217;t use global variables.
 </td>
 </tr>
 </table>
@@ -513,7 +521,7 @@ So, the <code>string</code> we want to output is passed to the <code>Write()</co
 <p>We specify what information a method needs as part of the method definition.
 Within the method we&#8217;re defining, those pieces of information are called <strong>parameters</strong>.
 A parameter is a variable that exists in the method and receives the argument, and it&#8217;s declared inside the parentheses in our method definition.
-The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses&#8212;&#8203;but now let&#8217;s see an example with a parameter.</p>
+The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses—but now let&#8217;s see an example with a parameter.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.5 - Method definition with a parameter, and a call with an argument.</div>
@@ -616,7 +624,7 @@ In general, think about what information the method needs to do its job, and the
 <p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
 </div>
 <div class="paragraph">
-<p>If you <a href="#_named_arguments">specify paramenter names</a> in a method call, the argument order doesn&#8217;t matter.</p>
+<p>If you <a href="deep-cuts.html#_named_arguments">specify paramenter names</a> in a method call, the argument order doesn&#8217;t matter.</p>
 </div>
 </div>
 </div>
@@ -626,7 +634,7 @@ In general, think about what information the method needs to do its job, and the
 <p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
 </div>
 <div class="paragraph">
-<p>You can <a href="#_optional_arguments">define some parameters as optional</a>, which means you don&#8217;t have to provide an argument for them.</p>
+<p>You can <a href="deep-cuts.html#_optional_arguments">define some parameters as optional</a>, which means you don&#8217;t have to provide an argument for them.</p>
 </div>
 </div>
 </div>
@@ -634,8 +642,8 @@ In general, think about what information the method needs to do its job, and the
 <div class="sect2">
 <h3 id="_returning_values">3.4. Returning Values</h3>
 <div class="paragraph">
-<p>The methods we&#8217;ve seen to this point are basically commands&#8212;&#8203;they simply perform a task, and then when they&#8217;re done, program execution just goes back to the method that called it and resumes there.
-But we can also create methods that are like questions&#8212;&#8203;they execute a chunk of code, but when they are finished they give back an answer.</p>
+<p>The methods we&#8217;ve seen to this point are basically commands—they simply perform a task, and then when they&#8217;re done, program execution just goes back to the method that called it and resumes there.
+But we can also create methods that are like questions—they execute a chunk of code, but when they are finished they give back an answer.</p>
 </div>
 <div class="paragraph">
 <p>In our LEGO analogy, the method would accept the pieces and give back the completed set.</p>
@@ -695,7 +703,7 @@ The <code>return</code> statement sends the <code>favNum</code> value back to th
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-If a method has a return type of anything other than <code>void</code>, it will only compile if it has a <code>return</code> statement followed by a value&#8212;&#8203;either literal or variable&#8212;&#8203;of the specified type.
+If a method has a return type of anything other than <code>void</code>, it will only compile if it has a <code>return</code> statement followed by a value—either literal or variable—of the specified type.
 </td>
 </tr>
 </table>
@@ -757,7 +765,7 @@ C# has a clever thing called a <em>tuple</em> that lets us return multiple value
 <p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
 </div>
 <div class="paragraph">
-<p>With your understanding of method returns and parameters, you can use <a href="#_nested_method_calls">[_nested_method_calls]</a> to simplify your code and reduce the number of variables you need to declare.</p>
+<p>With your understanding of method returns and parameters, you can use <a href="deep-cuts.html#_nested_method_calls">Nested Method Calls</a> to simplify your code and reduce the number of variables you need to declare.</p>
 </div>
 </div>
 </div>
@@ -769,7 +777,7 @@ There are a few reasons for this, but consider an obvious one.
 If we use a <code>Write()</code> method, our code is limited to only working in a console application.
 That&#8217;s fine for now, because it&#8217;s the only kind of application we know how to make!
 But what if we want to use that same code in a web application, or a mobile app?
-That <code>Write()</code> statement won&#8217;t work&#8212;&#8203;rather, the user will never see the result, because they won&#8217;t have a console window.</p>
+That <code>Write()</code> statement won&#8217;t work—rather, the user will never see the result, because they won&#8217;t have a console window.</p>
 </div>
 <div class="paragraph">
 <p>Consider this code:</p>
@@ -842,7 +850,7 @@ The solution is to return the string and perform the output in <code>Main()</cod
 </div>
 <div class="paragraph">
 <p>This is another example of something that seems annoying, like pointless extra work.
-When we&#8217;re learning new things, we sometimes have to accept the wisdom of people who are experienced&#8212;&#8203;and recognize that eventually we&#8217;ll see the point.
+When we&#8217;re learning new things, we sometimes have to accept the wisdom of people who are experienced—and recognize that eventually we&#8217;ll see the point.
 We&#8217;re all about learning good habits and best practices around here, so we&#8217;ll almost always return values rather than printing them.</p>
 </div>
 <div class="paragraph">
@@ -899,7 +907,7 @@ I heavily   penalize input and output statements outside of the <code>Main()</co
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to this point. You might choose to complete that work now, then move onto the next section&#8212;&#8203;which you&#8217;ll need for the Programming Project.
+The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to this point. You might choose to complete that work now, then move onto the next section—which you&#8217;ll need for the Programming Project.
 </td>
 </tr>
 </table>
@@ -937,7 +945,7 @@ We still want a method that calculates the average age, but one that takes three
 </div>
 <div class="paragraph">
 <p>To create another version of a method that operates a little differently, we can use <em>method overloading</em>.
-Overloading a method means creating a new version of the method that has the same name&#8212;&#8203;and the same basic purpose&#8212;&#8203;but a different set of parameters.
+Overloading a method means creating a new version of the method that has the same name—and the same basic purpose—but a different set of parameters.
 To overload a method, we write a new method with the same identifier, but with a different set of parameters.
 An overload for our <code>AverageAge()</code> method could look like this:</p>
 </div>
@@ -1140,7 +1148,7 @@ We simply provide the arguments that match the method signature we want to use.<
 <li>
 <p>What is a method, and why would you use one in your code?</p>
 <div class="paragraph">
-<p>(In your own words — bonus points if you mention LEGO. Or the Beatles.)</p>
+<p>(In your own words—bonus points if you mention LEGO. Or the Beatles.)</p>
 </div>
 </li>
 <li>
@@ -1206,7 +1214,7 @@ We simply provide the arguments that match the method signature we want to use.<
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sample answers provided in the <a href="_b_side_lo_fi_testing.html#methods">Liner Notes</a></em>.</p>
+<p><em>Sample answers provided in the <a href="_liner_notes.html#methods">Liner Notes</a></em>.</p>
 </div>
 </div>
 </div>
@@ -1217,8 +1225,8 @@ We simply provide the arguments that match the method signature we want to use.<
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-05-15<br />
-        17:10:13 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-08-07<br />
+        03:17:46 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
