@@ -107,7 +107,7 @@
 <p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
 </div>
 <div class="paragraph">
-<p>TODO: <a href="https://forms.gle/H9VgmhJkQcKx9iRi8" target="_blank" rel="noopener">CIS162AD Course Materials Feedback (Google Form)</a></p>
+<p>{feedback-url}</p>
 </div>
 <div class="paragraph">
 <p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Most noticeably (other than stuff that&#8217;s just missing) is the presence of placeholder links where I haven&#8217;t quite finished videos. Check back later for a more complete version.</mark></p>
@@ -250,7 +250,7 @@ We can store that result in a <code>bool</code> variable, as shown below, and we
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> canBuyAlcohol </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> age </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">21</span><span style="color: #f8f8f2">;</span>
 <span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isNegative </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> number </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
 <span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isArethaFranklin </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Aretha Franklin&quot;</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isArethaFranklin2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> name.Equals(</span><span style="color: #e6db74">&quot;Aretha Franklin&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isArethaFranklin2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> name.</span><span style="color: #66d9ef">equals</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Aretha Franklin&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="2"></i><b>(2)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -262,50 +262,24 @@ We can store that result in a <code>bool</code> variable, as shown below, and we
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This statement uses the <code>Equals()</code> method to check if two strings are equal.</td>
+<td>This statement uses the <code>equals()</code> method to check if two strings are equal.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
 <p>These assignment statements work like any other: the expression to the right of the equals symbol is evaluated, and the result is stored in the variable on the left.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_checking_string_equality">4.1.3. Checking <code>string</code> Equality</h4>
-<div class="paragraph">
-<p>In C#, we can test string equality with the <code>==</code> operator or the <code>Equals()</code> method.
-This is different from Java, where we can&#8217;t use the <code>==</code> operator on <code>string</code> values.
-I mention it here because it&#8217;s a common source of confusion for students who are learning both languages at the same time, or who are coming to C# with Java experience.</p>
-</div>
-<div class="paragraph">
-<p>Both the <code>Equals()</code> method and the <code>==</code> are <em>case sensitive</em>, so <code>Aretha Franklin</code> is different from <code>aretha franklin</code>.
-To perform a case-insensitive comparison, we can use the <code>String.Equals()</code> method with the <code>StringComparison.OrdinalIgnoreCase</code> option.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 4.3 - Case insensitive string comparison in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;aretha franklin&quot;</span><span style="color: #f8f8f2">;</span>
-
-<span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isArethaFranklin3 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> name.Equals(</span><span style="color: #e6db74">&quot;Aretha Franklin&quot;</span><span style="color: #f8f8f2">, StringComparison.OrdinalIgnoreCase);</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Programmers with experiences in other languages may be familiar with string comparisons by converting to all uppercase or lowercase.
-Though the above approach using <code>Equals()</code> is preferred, you could use the <code>ToUpper()</code> or <code>ToLower()</code> methods to perform a case-insensitive comparison.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 4.4 - Case insensitive string comparison in C#</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;aretha franklin&quot;</span><span style="color: #f8f8f2">;</span>
-
-<span style="color: #66d9ef">bool</span><span style="color: #f8f8f2"> isArethaFranklin4 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> name.ToUpper() </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;ARETHA FRANKLIN&quot;</span><span style="color: #f8f8f2">;</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In C#, we can test string equality with the <code>==</code> operator or the <code>equals()</code> method. This is different from Java, where we can&#8217;t use the <code>==</code> operator on <code>String</code> values. I mention it here because it&#8217;s a common source of confusion for students who are learning both languages at the same time.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -322,7 +296,7 @@ If the Boolean expression evaluates to <code>false</code>, the block of code wil
 In either case the program will continue executing the next line of code after the <code>if</code>-block.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.5 - A basic <code>if</code> statement in C#.</div>
+<div class="title">Example 4.3 - A basic <code>if</code> statement in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -360,7 +334,7 @@ If we want to choose between two blocks of code, we can add an <code>else</code>
 The syntax is straightforward: after the <code>if</code> block, add the keyword <code>else</code>, followed by a block of code in curly braces.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.6 - An <code>if-else</code> statement in C#.</div>
+<div class="title">Example 4.4 - An <code>if-else</code> statement in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -396,11 +370,6 @@ Basically, it&#8217;s an either-or situation.</p>
 <div class="paragraph video-title">
 <p><code>if</code> and <code>if-else</code> Statements in C#</p>
 </div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/d45KmuDzidk?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
 <div class="paragraph">
 <p>File from video:</p>
 </div>
@@ -417,10 +386,10 @@ Basically, it&#8217;s an either-or situation.</p>
 <div class="content">
 <div class="title">Interesting!</div>
 <div class="paragraph">
-<p>C# includes a shorthand form of an if-else statement called the <em>ternary operator</em>, which uses the question mark symbol. It&#8217;s a useful little trick, but it can be confusing for beginners—and for the people reading our code later. We won&#8217;t look at ternary operators in this course, but a web search should turn up plenty of examples if you are curious.</p>
+<p>C# includes a shorthand form of an if-else statement called the <em>ternary conditional operator</em>, which uses the question mark symbol. It&#8217;s a useful little trick, but it can be confusing for beginners—and for the people reading our code later. We won&#8217;t look at them in this course, but a web search should turn up plenty of examples if you are curious.</p>
 </div>
 <div class="paragraph">
-<p>Assignments in my course require you to use complete if-else statements, so you shouldn&#8217;t use the ternary operator in code you submit to me.</p>
+<p>Assignments in my course require you to use complete if-else statements, so you shouldn&#8217;t use the ternary conditional operator in code you submit to me.</p>
 </div>
 </div>
 </div>
@@ -444,7 +413,7 @@ This <code>if-else if</code> structure isn&#8217;t really a <em>thing</em> in C#
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.7 - Use of an <code>if-else if</code> structure to select one option from many.</div>
+<div class="title">Example 4.5 - Use of an <code>if-else if</code> structure to select one option from many.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -556,7 +525,25 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p>if-else if Statements in C# [COMING SOON!]</p>
+<p>if-else if Statements in C#</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/JU0CZsAaGSY?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions/TopSeller.cs" target="_blank" rel="noopener"><code>K12Student.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions/TopSellerFinished.cs" target="_blank" rel="noopener"><code>K12StudentFinished.cs</code></a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -590,7 +577,7 @@ Just like the <code>if-else if</code> structure, this is not a special structure
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.8 - Basic structure of a nested <code>if-else</code> statement.</div>
+<div class="title">Example 4.6 - Basic structure of a nested <code>if-else</code> statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -629,7 +616,7 @@ Just like the <code>if-else if</code> structure, this is not a special structure
 The if-else structures within those blocks check the average wind speed and return an appropriate description.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.9 - Use of nested <code>if-else</code> statements to select one option from many.</div>
+<div class="title">Example 4.7 - Use of nested <code>if-else</code> statements to select one option from many.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -833,7 +820,7 @@ A logical operator is a binary operation, so it takes two operands—but the ope
 For example, we could check if a student is eligible for a scholarship based on both their GPA (3.5 or better) and their age (younger than 25).</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.10 - A decision using a logical AND operation in C#.</div>
+<div class="title">Example 4.8 - A decision using a logical AND operation in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -865,7 +852,7 @@ Often, the logic we create using an AND operation can be implemented using neste
 <p>The OR operation is similar, but only one of the expressions needs to be <code>true</code> for the entire expression to be <code>true</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.11 - A decision using a logical OR operation in C#.</div>
+<div class="title">Example 4.9 - A decision using a logical OR operation in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -905,7 +892,7 @@ If the operand is <code>true</code>, the NOT operation will evaluate to <code>fa
 If the operand is <code>false</code>, the NOT operation will evaluate to <code>true</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.12 - A decision using a logical NOT operation in C#.</div>
+<div class="title">Example 4.10 - A decision using a logical NOT operation in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -932,7 +919,7 @@ Range checking means we want to see if a value is within a specified range.</p>
 <p>A common example of range checking is to convert a percentage grade to a letter grade.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.13 - Range checking using logical operators in C#.</div>
+<div class="title">Example 4.11 - Range checking using logical operators in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -960,7 +947,7 @@ Range checking means we want to see if a value is within a specified range.</p>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetLetterGrade</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> percentage)</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> String </span><span style="color: #a6e22e">GetLetterGrade</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> percentage)</span>
 <span style="color: #f8f8f2">{</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (percentage </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">&amp;&amp;</span><span style="color: #f8f8f2"> percentage </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span>
 <span style="color: #f8f8f2">    {</span>
@@ -1008,7 +995,7 @@ And since you see them often in code written by others, it&#8217;s good to know 
 <p>The basic structure of a <code>switch</code> statement is as follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.14 - A basic <code>switch</code> statement in C#.</div>
+<div class="title">Example 4.12 - A basic <code>switch</code> statement in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1050,7 +1037,7 @@ If we don&#8217;t include a <code>break</code> statement at the end of a <code>c
 This can be useful in some situations, but it&#8217;s generally not what you want, so you&#8217;ll usually see a <code>break</code> statement at the end of each <code>case</code> block.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.15 - A <code>switch</code> statement in C#.</div>
+<div class="title">Example 4.13 - A <code>switch</code> statement in C#.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1181,8 +1168,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-08-26<br />
-        14:12:41 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-08-27<br />
+        00:04:13 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
