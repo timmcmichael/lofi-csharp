@@ -68,9 +68,7 @@
 </li>
 <li><a href="_loops.html#_a_word_about_nested_loops">5.7. A Word About Nested Loops</a>
 </li>
-<li><a href="_loops.html#_just_for_fun_recursion">5.8. JUST FOR FUN: Recursion</a>
-</li>
-<li><a href="_loops.html#_solution_walkthroughs">5.9. Solution Walkthroughs</a>
+<li><a href="_loops.html#_solution_walkthroughs">5.8. Solution Walkthroughs</a>
 </li>
 <li><a href="_loops.html#_whats_the_point_6">What&#8217;s the Point?</a>
 </li>
@@ -106,14 +104,21 @@
 <div class="paragraph subtitle">
 <p><span title='This is "Chapter Five" in binary (base 2)'>Chapter 0101 <sub>2</sub></span></p>
 </div>
-<div class="sidebarblock">
+<div class="exampleblock callout spin">
 <div class="content">
-<div class="title">Unfinished Chapter!</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://optraffic.com/wp-content/uploads/2024/10/Standard-Stop-Signs--1024x768.jpg" alt="Stop" width="250" height="250">
+</div>
+</div>
+<div class="paragraph">
+<p><strong class="callout-title">Unfinished Chapter!!</strong></p>
+</div>
 <div class="paragraph">
 <p>I am actively working to complete this eBook, and I haven&#8217;t gotten to this chapter yet. In fact, it&#8217;s probably just a copy/paste from a similar chapter in my OOP/Java book.</p>
 </div>
 <div class="paragraph">
-<p>In other words, don&#8217;t read this yet!</p>
+<p><strong>In other words, don&#8217;t read this yet!</strong></p>
 </div>
 </div>
 </div>
@@ -170,7 +175,7 @@ We can call this a <em>check first, then run</em> loop.</p>
 </div>
 <div class="paragraph">
 <p>A <code>while</code> loop is exactly like an <code>if</code> statement: a Boolean expression is checked, and if it&#8217;s true, the block of code is executed.
-The only difference is that, after the block of code is executed, the program jumps back to the beginning of the loop and checks the condition again, instead of automatically proceeding as an <code>if</code> statement would.
+The only difference is that, after the block of code is executed, program execution jumps back to the beginning of the loop and checks the condition again, instead of just moving forward as an <code>if</code> statement would.
 If the condition is still true, the block of code is executed again.</p>
 </div>
 <div class="listingblock">
@@ -198,13 +203,13 @@ This process repeats until the expression <code>count &lt; 10</code> is false.</
 </div>
 <div class="paragraph">
 <p>The result of this loop is that the program prints out the value of <code>count</code> 10 times, starting with 0 and ending with 9.
-It is a definite loop because, before the loop starts, it&#8217;s already been determined that the loop will repeat 10 times.</p>
+It is a <em>definite loop</em> (see the video <strong>Introduction to Loops</strong>, above) because, before the loop starts, it&#8217;s already been determined that the loop will repeat 10 times.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_infinite_loops">5.2. Infinite Loops</h3>
 <div class="paragraph">
-<p>One thing to be careful of when using a <code>while</code> loop is the possibility of creating an <em>infinite loop</em>.
+<p>One thing to be careful of when using a <code>while</code> loop is the possibility of creating an <em>infinite loop</em>; they&#8217;re possible in any loop structure, but especially easy with a <code>while</code> loop.
 An infinite loop is a loop that repeats forever, because the condition that determines whether the loop should repeat is never <code>false</code>.
 Infinite loops are a common mistake for new programmers, and they cause our program to crash or appear to freeze.</p>
 </div>
@@ -235,7 +240,7 @@ The program will print out "Count is: 0" over and over again, forever.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button—the symbol for "stop". Every IDE should also allow you to press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop a program.
+Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button—like the symbol for "stop" in a media player app. Every IDE should also allow you to press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop a program.
 </td>
 </tr>
 </table>
@@ -258,8 +263,9 @@ Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. 
 </div>
 <div class="paragraph">
 <p>This loop will repeat forever, because the condition <code>true</code> is always true.
-Some programmers use this to start a loop and then use an if statement to break out of the loop when a certain condition is met, but that&#8217;s not really an infinite loop—it just puts the boolean expression that controls the loop in an <code>if</code> statement within the loop&#8217;s body instead of in the <code>while</code> statement.
-I personally consider that less readable than using a clear condition in the <code>while</code> statement, so I don&#8217;t write loops like that.</p>
+Some programmers use <code>while (true)</code> to start a loop and then use an <code>if</code> statement to break out of the loop when a certain condition is met, but that&#8217;s not really an infinite loop—it just puts the boolean expression that controls the loop in an <code>if</code> statement within the loop&#8217;s body instead of in the <code>while</code> statement.
+I personally consider that less readable than using a clear condition in the <code>while</code> statement, so I don&#8217;t write loops like that.
+I&#8217;ll rant and rave about that a little later in the chapter.</p>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -358,34 +364,22 @@ For example, if a program displays a menu with three options, a loop could keep 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">InputValidation</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> choiceString;</span>
+
+<span style="color: #66d9ef">do</span>
 <span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> choiceString;</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;3. Withdraw&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;4. Exit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Your choice: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    choiceString </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+<span style="color: #f8f8f2">    choice </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(choiceString);</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (choice </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> choice </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">do</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;3. Withdraw&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">            Console.WriteLine(</span><span style="color: #e6db74">&quot;4. Exit&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">            Console.Write(</span><span style="color: #e6db74">&quot;Your choice: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">            choiceString </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
-<span style="color: #f8f8f2">            choice </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(choiceString);</span>
-<span style="color: #f8f8f2">        } </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (choice </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> choice </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
-
-<span style="color: #f8f8f2">        </span><span style="color: #959077">// Rest of the code...</span>
-<span style="color: #f8f8f2">    }</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: #959077">// Rest of the code...</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -396,7 +390,7 @@ For example, if a program displays a menu with three options, a loop could keep 
 <div class="sect2">
 <h3 id="_for_loops">5.5. <code>for</code> Loops</h3>
 <div class="paragraph">
-<p>Definite loops are really common, especially when we learn about things like <em>arrays</em> later on, so C# provides a shorthand format to create that kind of loop: the <code>for</code> keyword.
+<p>Definite loops are really common, especially when we learn about things like <em><a href="_arrays.html">arrays</a></em> later on, so C# provides a shorthand format to create that kind of loop: the <code>for</code> keyword.
 The syntax of a <code>for</code> loop can be a little intimidating for new coders, but it really just takes  all three of the pieces we need for a loop and combines them into one line of code: initializing a counter, checking the counter, and changing the counter.</p>
 </div>
 <div class="listingblock">
@@ -466,7 +460,7 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 <div class="sect2">
 <h3 id="_break_and_continue_statements">5.6. <code>break</code> and <code>continue</code> Statements</h3>
 <div class="paragraph">
-<p>I believe that <code>while</code>, <code>do-while</code>, and <code>for</code> loops, when written with clear Boolean expressions, are the most readable loops, and any loop a coder will need in their career can be written with those structures.
+<p>I believe that <code>while</code>, <code>do-while</code>, and <code>for</code> loops, when written with clear Boolean expressions, are the most readable loops, and any loop a coder will need in their career can be written with one of those structures.
 A well-written loop will execute the block of code as many times as necessary, and then stop when the condition is false, without any additional help from the programmer.
 However, C# provides two statements that can be used to alter the flow of a loop: the <code>break</code> statement and the <code>continue</code> statement.</p>
 </div>
@@ -476,9 +470,9 @@ However, it is important for beginners to know how they work.</p>
 </div>
 <div class="paragraph">
 <p>The <code>break</code> statement is used to exit a loop early.
-When the <code>break</code> statement is executed, the loop stops, and the program continues with the next statement after the loop; think of it as a <code>return</code> statement for a loop (except that it can&#8217;t pass a value anywhere).
+When a <code>break</code> statement is executed, the loop stops, and the program continues with the next statement after the loop; think of it as a <code>return</code> statement for a loop (except that it can&#8217;t pass a value anywhere).
 Some programmers use <code>break</code> when they need to get out of a loop before the controlling condition is false.
-My own opinion is that this is a sign the controlling condition should be rethought, but because you&#8217;re likely to see <code>break</code> in other people&#8217;s code, I think it&#8217;s important to know about it.</p>
+My own opinion is that this is a sign the controlling condition should be rewritten to account for all contingencies, but because you&#8217;re likely to see <code>break</code> in other people&#8217;s code, I think it&#8217;s important to know about it.</p>
 </div>
 <div class="paragraph">
 <p>The <code>continue</code> statement is used to skip the rest of the block of code in a loop and jump back to the beginning of the loop.
@@ -492,23 +486,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 <div class="paragraph video-title">
 <p><code>break</code> and <code>continue</code> in C# [COMING SOON!]</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/05%20Loops/BreakDemo1.cs" target="_blank" rel="noopener"><code>BreakDemo1.cs</code></a></p>
-</li>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/05%20Loops/BreakDemo2.cs" target="_blank" rel="noopener"><code>BreakDemo2.cs</code></a></p>
-</li>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/05%20Loops/EvilDemo.cs" target="_blank" rel="noopener"><code>EvilDemo.cs</code></a></p>
-</li>
-</ul>
 </div>
-</div>
-</div>
-<div class="paragraph">
-<p>/ TODO: Add content about nested loops?</p>
 </div>
 </div>
 <div class="sect2">
@@ -521,17 +499,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 </div>
 <div class="sect2">
-<h3 id="_just_for_fun_recursion">5.8. JUST FOR FUN: Recursion</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Content labelled as <strong>Just for Fun</strong> is not required for the course, but is included for students who are interested in learning more about the topic. If you&#8217;re struggling to learn the material in this course, please skip this—maybe you can return when you have more time.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_solution_walkthroughs">5.9. Solution Walkthroughs</h3>
+<h3 id="_solution_walkthroughs">5.8. Solution Walkthroughs</h3>
 <div class="paragraph">
 <p>In "solution walkthrough" videos, I give a problem/prompt that is similar to the kinds of work I assign, and then I record myself writing a solution. It&#8217;s not absolutely mandatory to watch this video, but students report that these videos are particularly helpful.</p>
 </div>
@@ -588,8 +556,8 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-09-04<br />
-        16:01:56 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-09-08<br />
+        02:44:47 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
