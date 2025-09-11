@@ -181,17 +181,17 @@ If the condition is still true, the block of code is executed again.</p>
 <div class="listingblock">
 <div class="title">Example 5.1 - A basic <code>while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
-<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
+<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -216,15 +216,15 @@ Infinite loops are a common mistake for new programmers, and they cause our prog
 <div class="listingblock">
 <div class="title">Example 5.2 - An infinite loop using <code>while</code></div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
+<span style="color: #F8F8F2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -251,13 +251,13 @@ Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. 
 <div class="listingblock">
 <div class="title">Example 5.3 - An infinite loop using a <code>while</code> statement.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
+<span style="color: #F8F8F2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -267,15 +267,47 @@ Some programmers use <code>while (true)</code> to start a loop and then use an <
 I personally consider that less readable than using a clear condition in the <code>while</code> statement, so I don&#8217;t write loops like that.
 I&#8217;ll rant and rave about that a little later in the chapter.</p>
 </div>
-<div class="exampleblock callout ttw">
-<div class="content">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+<p>There&#8217;s a common beginner mistake that also creates an infinite loop: adding a semicolon immediately after the while statement.</p>
 </div>
-<div class="paragraph video-title">
-<p><code>while</code> Loops in C# [COMING SOON!]</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
+<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This semicolon ends the line!</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A semicolon by itself in C# essentially means "do nothing."
+So this really says, "While the count is less than 10, do nothing" and it never even gets to the code block.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -289,17 +321,17 @@ Other than that, a <code>do-while</code> loop is exactly the same as a <code>whi
 <div class="listingblock">
 <div class="title">Example 5.4 - A basic <code>do-while</code> loop in C#.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">do</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
-<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">do</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
+<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">} </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -313,7 +345,7 @@ The <code>while</code> statement is at the end of the loop; the <code>do</code> 
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
 </div>
 <div class="paragraph video-title">
-<p><code>do-while</code> Loops in C# [COMING SOON!]</p>
+<p><code>while</code> and <code>do-while</code> Loops in C# [COMING SOON!]</p>
 </div>
 </div>
 </div>
@@ -349,7 +381,7 @@ For example, if a program displays a menu with three options, a loop could keep 
 <div class="listingblock">
 <div class="title">Example 5.5 - Input validation with a <code>do-while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -364,20 +396,20 @@ For example, if a program displays a menu with three options, a loop could keep 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
-<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> choiceString;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> choice;</span>
+<span style="color: #66D9EF">string</span><span style="color: #F8F8F2"> choiceString;</span>
 
-<span style="color: #66d9ef">do</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;3. Withdraw&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;4. Exit&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Your choice: &quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">    choiceString </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
-<span style="color: #f8f8f2">    choice </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(choiceString);</span>
-<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (choice </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> choice </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66D9EF">do</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Choose an option:&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;1. Check balance&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;2. Deposit&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;3. Withdraw&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;4. Exit&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">    Console.Write(</span><span style="color: #E6DB74">&quot;Your choice: &quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">    choiceString </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> Console.ReadLine();</span>
+<span style="color: #F8F8F2">    choice </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> Convert.ToInt32(choiceString);</span>
+<span style="color: #F8F8F2">} </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (choice </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">||</span><span style="color: #F8F8F2"> choice </span><span style="color: #FF4689">&gt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
 
 <span style="color: #959077">// Rest of the code...</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -396,13 +428,13 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 <div class="listingblock">
 <div class="title">Example 5.6 - A simple <code>for</code> loop.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">; count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
-<span style="color: #f8f8f2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">; count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
+<span style="color: #F8F8F2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -556,8 +588,8 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-09-08<br />
-        21:14:29 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-09-11<br />
+        21:09:10 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
