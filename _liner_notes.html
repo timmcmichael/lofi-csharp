@@ -528,8 +528,53 @@ A separate <code>if</code> is evaluated no matter what—even if the previous on
 <div class="qlist qanda">
 <ol>
 <li>
-<p><em><strong>Q1</strong></em></p>
-<p>Answer</p>
+<p><em><strong>Explain the difference between a definite loop and an indefinite loop?</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A <strong>definite</strong> loop runs a set number of times (for example, a for loop that runs 10 times).</p>
+</li>
+<li>
+<p>An <strong>indefinite</strong> loop runs until some condition changes, so the number of times it repeats isn’t known ahead of time (for example, a while loop that keeps going until the user types “quit”).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>In a <code>while</code> loop, what happens if the Boolean condition is <code>false</code> on the first check?</strong></em></p>
+<p>If the Boolean condition is <code>false</code> on the first check, the code inside the <code>while</code> loop will not run at all. The program will skip the loop and continue with the next part of the code.</p>
+</li>
+<li>
+<p><em><strong>Describe one way an infinite loop can occur.</strong></em></p>
+<p>An infinite loop can occur if the condition in a <code>while</code> loop never becomes <code>false</code>. This can happen if you forget to update the variable that the condition checks, or if the update logic is incorrect. For example, if you have <code>while (count &lt; 10)</code> but never increase <code>count</code> inside the loop, it will run forever.</p>
+</li>
+<li>
+<p><em><strong>When doing input validation with loops, why might a do-while loop be preferable to a while loop?</strong></em></p>
+<p>A <code>do-while</code> loop always executes at least once, so the user is guaranteed to be asked for input before the condition is checked.</p>
+</li>
+<li>
+<p><em><strong>List and describe the three parts of a for loop in C#.</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Initialization – runs once before the loop starts (e.g., int i = 0).</p>
+</li>
+<li>
+<p>Condition – checked with each loop iteration; the loop continues while it&#8217;s true (e.g., i &lt; 5).</p>
+</li>
+<li>
+<p>Update – runs after each loop iteration, usually adjusting the loop variable (e.g., i++).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>Explain what the break statement does inside a loop.</strong></em></p>
+<p>It immediately exits the loop, skipping any remaining iterations, and continues execution after the loop.</p>
+</li>
+<li>
+<p><em><strong>Explain what the continue statement does inside a loop.</strong></em></p>
+<p>It skips the rest of the current iteration and re-checks the loop condition for the next cycle.</p>
 </li>
 </ol>
 </div>
@@ -609,7 +654,7 @@ A separate <code>if</code> is evaluated no matter what—even if the previous on
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-09-22<br />
-        01:34:54 UTC<br />
+        01:47:59 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
