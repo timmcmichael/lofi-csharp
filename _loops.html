@@ -611,7 +611,86 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div class="sect2">
 <h3 id="_counters_and_accumulators">5.7. Counters and Accumulators</h3>
-
+<div class="paragraph">
+<p>Loops are often used to calculate a total or to count how many times something happens.
+When we use a loop to calculate a total, we call the variable that holds the total an <em>accumulator</em>.
+When we use a loop to count how many times something happens, we call the variable that holds the count a <em>counter</em>.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve seen counters in the examples of definite loops, where we used a counter variable to control how many times the loop repeated.
+In fact, <code>for</code> loops essentially require a counter variable to work.
+But in addition to controlling the loop, we can also use a counter variable to count how many times something happens within the loop.
+As a trivial example, we could count how many numbers are divisible by 4 in a given range.
+(We&#8217;ll pretend that we don&#8217;t know a mathematical solution to that problem&#8212;&#8203;we&#8217;re trying to learn loops here!)</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 5.7 - A loop that counts how many numbers between 33 and 75 are divisible by 4.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> divisible </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// This is our counter variable</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">33</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">75</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (i </span><span style="color: #ff4689">%</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">==</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        divisible</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Increment the counter when we find a number divisible by 4</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;There are &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> divisible </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; numbers between 33 and 75 that are divisible by 4.&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Before starting the loop, we declare and initialize a variable that will hold our count; in this case, we call it <code>divisible</code>.
+The <code>for</code> loop uses a control variable called <code>i</code> to iterate through the numbers from 33 to 75.
+Then, inside the loop, we check each number to see if it&#8217;s divisible by 4.
+To check that, we use the modulus operator (<code>%</code>), which gives us the remainder when one number is divided by another; if there is no remainder when <code>i</code> is divided by 4, then <code>i</code> is divisible by 4.
+When we find a number that meets that condition, we increment our counter variable <code>divisible</code> by 1.
+Once the loop is finished, the variable <code>divisible</code> holds the total count of numbers between 33 and 75 that are divisible by 4, and we can output that value.</p>
+</div>
+<div class="paragraph">
+<p>An <em>accumulator</em> is similar, but instead of counting how many times something happens, it adds up a total.</p>
+</div>
+<div class="paragraph">
+<p>Again, we&#8217;ll initialize a variable before the loop starts.
+Within the loop, we&#8217;ll add to that variable as necessary, and when the loop is finished, the variable will hold the total.</p>
+</div>
+<div class="paragraph">
+<p>In this example, we&#8217;ll ask the user to input numbers until they enter a zero, and then we&#8217;ll output the total of all the numbers they entered.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 5.8 - A loop that accumulates a total of user-entered numbers.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> total </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// This is our accumulator variable</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> number;</span>
+<span style="color: #66d9ef">do</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.Write(</span><span style="color: #e6db74">&quot;Enter a number (0 to stop): &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    number </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(Console.ReadLine());</span>
+<span style="color: #f8f8f2">    total </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> number; </span><span style="color: #959077">// Add the entered number to the total</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (number </span><span style="color: #ff4689">!=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;The total is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> total);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that counters and accumulators may not seem that important in these simple examples, but as we learn more about programming, we&#8217;ll see that they are essential tools for working with data.
+They&#8217;ll be especially important when we learn about <a href="_arrays.html">arrays</a>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_a_word_about_nested_loops">5.8. A Word About Nested Loops</h3>
@@ -670,7 +749,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-09-23<br />
-        02:58:53 UTC<br />
+        03:16:50 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
