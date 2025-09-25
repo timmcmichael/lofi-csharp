@@ -971,7 +971,7 @@ Those accessors, in turn, have code block that define what happens when the prop
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> Date</span>
 <span style="color: #f8f8f2">    {</span>
 <span style="color: #f8f8f2">        </span><span style="color: #66d9ef">get</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date; }</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">set</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2">; }</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">set</span><span style="color: #f8f8f2"> { </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.date </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">value</span><span style="color: #f8f8f2">; } </span><i class="conum" data-value="1"></i><b>(1)</b>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> WaterTemp</span>
 <span style="color: #f8f8f2">    {</span>
@@ -991,6 +991,14 @@ Those accessors, in turn, have code block that define what happens when the prop
 <span style="color: #f8f8f2">    }</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The keyword <code>value</code> is a special identifier that represents the new value being assigned to the property. It is similar to a parameter in a setter method, but does not have to be explicitly defined.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Properties can be used within a driver class as if they were fields—we simply reference the property name using dot notation, and treat it like a variable.</p>
@@ -1325,7 +1333,7 @@ This would mean that every savings account would earn the same interest rate, wh
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-09-25<br />
-        22:33:24 UTC<br />
+        22:37:09 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
