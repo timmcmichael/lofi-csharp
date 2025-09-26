@@ -603,8 +603,37 @@ A separate <code>if</code> is evaluated no matter what—even if the previous on
 <div class="qlist qanda">
 <ol>
 <li>
-<p><em><strong>Q1</strong></em></p>
-<p>Answer</p>
+<p><em><strong>What is a class in object-oriented programming, and how does it relate to an object?</strong></em></p>
+<p>A class is a blueprint that defines the fields and methods an object will have. An object is an actual instance created from that class.</p>
+</li>
+<li>
+<p><em><strong>Explain encapsulation and why we typically make class fields private.</strong></em></p>
+<p>Encapsulation means bundling data and methods together and restricting direct access. We make fields private to protect them from unwanted changes and to control access through methods or properties.</p>
+</li>
+<li>
+<p><em><strong>What is the difference between an accessor (getter) method and a mutator (setter) method?</strong></em></p>
+<p>An accessor returns the value of a field, while a mutator changes (sets) the value of a field.</p>
+</li>
+<li>
+<p><em><strong>How do you instantiate (create) an object from a class in C#? Give the syntax to instantiate an object with a class called Guitar.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Guitar myGuitar </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Guitar();</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What is a constructor, and what role does it play when creating an object?</strong></em></p>
+<p>A constructor is a special method that runs when an object is created. It sets up the object, often by initializing fields.</p>
+</li>
+<li>
+<p><em><strong>What is a property in C#, and how does it differ from manually writing getters and setters?</strong></em></p>
+<p>A property provides a simpler, built-in way to define get and set access for a field. It replaces the need to write separate getter and setter methods.</p>
+</li>
+<li>
+<p><em><strong>Explain how data validation might be implemented in a setter (or property set) method.</strong></em></p>
+<p>In the setter, you can check the value before assigning it to the field. For example, only accept positive numbers or reject empty strings.</p>
 </li>
 </ol>
 </div>
@@ -662,7 +691,7 @@ A separate <code>if</code> is evaluated no matter what—even if the previous on
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-09-26<br />
-        02:47:37 UTC<br />
+        03:02:51 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
