@@ -643,8 +643,61 @@ A separate <code>if</code> is evaluated no matter what—even if the previous on
 <div class="qlist qanda">
 <ol>
 <li>
-<p><em><strong>Q1</strong></em></p>
-<p>Answer</p>
+<p><em><strong>What is the purpose of an array in a program?</strong></em></p>
+<p>An array lets you store a bunch of related values together under one name, instead of creating a separate variable for each one.</p>
+</li>
+<li>
+<p><em><strong>How do you declare an array of 10 int values in C#?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[] numbers </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[</span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">];</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>How would you print out how many elements are in an array <code>top40Songs</code>?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><span></span><span style="color: #F8F8F2">Console.WriteLine(top40Songs.Length);</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>If an array has 8 elements, what is the index of the first element? What is the index of the last element?</strong></em></p>
+<p>The first element is at index <strong>0</strong>, and the last element is at index <strong>7</strong> (because the count starts at zero).</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s the difference between these two statements?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[] numbers;</span>
+<span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[] numbers </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2">[</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">];</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first line just <strong>declares</strong> the variable — it doesn’t actually make an array yet. The second line both declares and <strong>creates</strong> an array that can hold 3 integers.</p>
+</div>
+</li>
+<li>
+<p><em><strong>How do you assign a value of 42 to the first element in an array named <code>ratings</code>?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><span></span><span style="color: #F8F8F2">ratings[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">42</span><span style="color: #F8F8F2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Write a <code>for</code> loop to print all elements of an array called <code>names</code>.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="csharp"><span></span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> names.Length; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">    Console.WriteLine(names[i]);</span>
+<span style="color: #F8F8F2">}</span></code></pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -691,7 +744,7 @@ A separate <code>if</code> is evaluated no matter what—even if the previous on
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-11-04<br />
-        17:41:54 UTC<br />
+        17:58:29 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
