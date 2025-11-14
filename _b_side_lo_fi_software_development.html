@@ -74,7 +74,7 @@
 </li>
 <li><a href="_b_side_lo_fi_software_development.html#_software_development_life_cycle">Software Development Life Cycle</a>
 </li>
-<li><a href="_b_side_lo_fi_software_development.html#_coding_on_a_team">Coding on a Team</a>
+<li><a href="_b_side_lo_fi_software_development.html#_agile_software_development">Agile Software Development</a>
 </li>
 <li><a href="_b_side_lo_fi_software_development.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_12">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
@@ -386,11 +386,72 @@ These paradigms are huge topics that could be entire books and courses of their 
 <div class="paragraph subtitle">
 <p>Git, Code Repositories, Branches and Merges</p>
 </div>
+<div class="paragraph">
+<p>A large-scale development project involves many developers working simultaneously on different parts of the codebase.
+There is a high potential for conflicts and errors if two people are making changes to the same files at the same time.
+In addition to this, teams need to keep track of changes over time, with the ability to revert to previous versions if necessary.</p>
+</div>
+<div class="paragraph">
+<p>To manage this development environment, teams use a <em>version control system</em>, or VCS.
+A VCS allows developers to maintain different versions of the codebase; for example, you might have a version that&#8217;s been released or deployed to users and a version that&#8217;s still being worked on.
+You still need to be able to update and improve the deployed version, especially to address bugs or security issues, while new features are being developed for the next release.</p>
+</div>
+<div class="paragraph">
+<p>While you could just copy your project to a new folder to start working on a new version, that quickly becomes difficult to manage as the project grows and more versions are created.
+A VCS manages all of this for you.</p>
+</div>
+<div class="paragraph">
+<p>Some of the key features of a VCS include:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">*Tracking changes</dt>
+<dd>
+<p>A VCS records every change made to files in the project, along with information about who made the change and when. This allows the team to keep track of changes and see the history of the project over time. It also lets us blame the coder who broke everything!</p>
+</dd>
+<dt class="hdlist1">*Reversion functionality</dt>
+<dd>
+<p>A VCS allows developers to revert to a previous version of the code if a problem is discovered. So the coder who got blamed for breaking everything is able to go back to a working version without too much trouble.</p>
+</dd>
+<dt class="hdlist1">*Collaboration</dt>
+<dd>
+<p>A VCS facilitates collaboration by allowing developers to create <em>branches</em> of the project. A branch is like a separate copy of the project where we can work without impacting the main codebase or deployed project. Once we&#8217;re satisfied with our changes, we can <em>merge</em> our branch back into the main codebase—and the VCS will help sort out any conflicts that the merge might create.</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_git">Git</h4>
+<div class="paragraph">
+<p>The most popular software for version control is <em>Git</em>, which was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>—the same guy who created Linux.
+It is free and open-source, so anybody can set it up and use it to manage their projects.
+Projects are stored in a <em>repository</em> (or <em>repo</em> for short), which contains all of the files and the history of changes made to those files.</p>
+</div>
+<div class="paragraph">
+<p>Git is a <em>distributed</em> version control system, meaning that every developer working on a project has a complete copy of the repository on their local machine.
+When a developer joins the project, they <em>clone</em> the repository to their computer.
+Then they can work offline and make whatever changes they want.
+When they&#8217;re ready to share their changes with the rest of the team, they sync their changes back to the central repository.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t want to set up your own Git server, you can use a cloud-based solution, such as GitHub.
+GitHub uses the Git version control system and provides a web-based user interface for managing your repositories (along with a handful of other features); other cloudbased Git services include GitLab and Bitbucket offer similar services.
+Though it has paid plans and features, you can manage individual and small team projects on GitHub for free, and it&#8217;s become a popular platform for open-source projects.</p>
+</div>
+<div class="paragraph">
+<p>Git can manage files of any type, so it can be used for projects in any programming language—and for projects that aren&#8217;t even code-related.
+This eBook is managed on GitHub and published on their webhosting platform, "GitHub Pages".
+Although I work on the project alone, I like that Git allows me to work on the project from any of my computers (office, home, and laptop) and it keeps everything in sync.</p>
+</div>
+<div class="paragraph">
+<p>The use of Git is a pretty big topic, and another one that&#8217;s beyond the scope of this book, but it&#8217;s important to at least know about it.
+Some of my classes include an introduction to Git (and use GitHub), but there are also a ton of resources out there if you want to explore it on your own.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_software_development_life_cycle">Software Development Life Cycle</h3>
 <div class="paragraph subtitle">
-<p>Breaking a Project Down into Manageable Steps</p>
+<p>The Basic Phases of a Software Project</p>
 </div>
 <div class="paragraph">
 <p>Learning to write code means creating a lot of programs—mostly small, straightforward programs at first.
@@ -399,13 +460,11 @@ That kind of stuff; but in my course, we don&#8217;t get too caught up in the ma
 But we care <strong>a lot</strong> about understanding the requirements of a program and implementing it successfully.</p>
 </div>
 <div class="paragraph">
-<p>As our programs become bigger and more complex, we&#8217;ll need to work within a deliberate design and implementation process in order to keep ourselves organized and focused.
-Even the smaller programs we&#8217;ll develop while learning the basics will benefit from a thoughtful approach beyond just opening a new file and starting to type.
-It ensures that we use our time efficiently.
-And when we are faced with solving a programming problem that really intimidates us, the process will help make the task more approachable.</p>
+<p>All software development projects, regardless of size or complexity, incluse some common elements.
+The more complex the project, the more formalized these elements become—but even small projects benefit from a thoughtful approach to development.</p>
 </div>
 <div class="paragraph">
-<p>For big or small projects, a good general approach to software development is:</p>
+<p>There are many ways to manage a software development project, but regardless of the specific methodology, most projects include some version of the following phases:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -415,7 +474,7 @@ And when we are faced with solving a programming problem that really intimidates
 </dd>
 <dt class="hdlist1">Testing Plan</dt>
 <dd>
-<p>Determine how the final program will be tested. The testing plan will be useful, but most importantly, taking the time to establish a specific testing plan ensures that we thoroughly understand the program before we begin writing code. If we don&#8217;t know how the program will work, we&#8217;re not yet ready to begin coding. <strong>Ask yourself, <em>How will I make sure the program works correctly?</em></strong></p>
+<p>Determine how the final program will be tested. The testing plan itself will be useful, but just as importantly, the time spent creating the plan ensures forces us to understand the program thoroughly. If we don&#8217;t know how the program will work, we&#8217;re not yet ready to begin coding. <strong>Ask yourself, <em>How will I ensure the program works correctly?</em></strong></p>
 </dd>
 <dt class="hdlist1">Implementation</dt>
 <dd>
@@ -423,7 +482,7 @@ And when we are faced with solving a programming problem that really intimidates
 </dd>
 <dt class="hdlist1">Deployment</dt>
 <dd>
-<p>Once the program is complete and has passed all tests, it&#8217;s time to deploy it. This might mean sharing it with users, installing it on a server, or simply submitting it for a class assignment. <strong>Ask yourself, <em>How will I deliver this program to its users?</em></strong></p>
+<p>Once the program is complete and has passed all tests, it&#8217;s time to deploy. This might mean sharing it with users, installing it on a server, or simply submitting it for a class assignment. <strong>Ask yourself, <em>How will I deliver this program to end users?</em></strong></p>
 </dd>
 <dt class="hdlist1">Revise or maintain</dt>
 <dd>
@@ -432,13 +491,124 @@ And when we are faced with solving a programming problem that really intimidates
 </dl>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll flesh out this process as we go—and as our programs become more advanced.</p>
+<p>We can think of these general components as a cycle that repeats whenever we create or update software, and we refer to this cycle as the <em>Software Development Life Cycle</em> (SDLC).</p>
+</div>
+<div class="sect3">
+<h4 id="_waterfall_software_development">Waterfall Software Development</h4>
+<div class="paragraph">
+<p>Waterfall development is a traditional software development methodology that follows a linear and sequential approach.
+It treats the components of the SDLC as distinct phases that flow downward, like a waterfall, following strictly from one phase to the next.
+Each phase has specific deliverables that must be complete before moving on to the next phase.</p>
+</div>
+<div class="paragraph">
+<p>For example, the project will begin with a detailed planning and analysis phase, where all requirements are gathered and documented.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Developers will meet with clients or stakeholders to understand their needs and expectations, using that information to create a comprehensive requirements document.</p>
+</li>
+<li>
+<p>Once the requirements are finalized (and no sooner!), the project moves to the design phase, where the overall architecture and structure of the software are planned out.</p>
+</li>
+<li>
+<p>After the design is complete (and no sooner!), the implementation phase begins, where programmers write the actual code that puts the design into action.</p>
+</li>
+<li>
+<p>Once the code is complete (and no sooner! Sort of&#8230;&#8203;), the testing phase begins, where the software is rigorously tested to make sure it meets all of the requirements specified in the planning phase. And, to be clear, some testing <strong>does</strong> occur during the implementation phase, because developers test their code as they write it. But this phase focuses on comprehensive testing of the entire system.</p>
+</li>
+<li>
+<p>Finally, once the software has passed all tests (and no sooner!), it is deployed to users.</p>
+</li>
+<li>
+<p>After deployment, the software enters the maintenance phase, where it is monitored for issues and updated as needed.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This <em>waterfall</em> approach is pretty common for a handful of reasons.
+It is a very straightforward and easy to manage process, since everyone focuses on one phase at a time.
+The structured and linear nature of waterfall development often appeals to programmers, who tend to be logical and methodical thinkers.
+And managers like it to, since the heavy emphasis on planning and documentation can identify potential issues early in the process—before they bome too costly to fix.</p>
+</div>
+<div class="paragraph">
+<p>However, waterfall development has some significant drawbacks.
+Most notably, it is rigid and does not adapt well to changes in requirements along the way.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_coding_on_a_team">Coding on a Team</h3>
-<div class="paragraph subtitle">
-<p>Keeping Everyone on the Same Page</p>
+<h3 id="_agile_software_development">Agile Software Development</h3>
+<div class="paragraph">
+<p>In response to the limitations of waterfall development, the software industry has moved toward more flexible project management approaches, such as <em>Agile</em> software development.</p>
+</div>
+<div class="paragraph">
+<p>Where traditional software development approaches rely on a detailed plan created at the beginning of a project, Agile shifts the focus to adaptability and responsiveness to change.</p>
+</div>
+<div class="paragraph">
+<p>Based on the <a href="https://agilemanifesto.org"><em>Manifesto for Agile Software Development</em></a>, agile development prioritizes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Individuals and interactions over processes and tools</p>
+</li>
+<li>
+<p>Working software over comprehensive documentation</p>
+</li>
+<li>
+<p>Customer collaboration over contract negotiation</p>
+</li>
+<li>
+<p>Responding to change over following a plan</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>One analogy for the differences between Waterfall and Agile is planning a road trip to Key West (which is, incidentally, <a href="https://www.youtube.com/watch?v=1EnyZ9zcWys">spectacular</a>, and best experienced in a convertible).
+In a Waterfall approach, you would plan the entire trip in advance, mapping out every stop, hotel, and activity along the way.
+You would stick to that plan no matter what, even if you discovered a better route or a more interesting destination.
+In an Agile approach, you would plan only the first leg of the trip, then reassess your plans at each stop based on new information and opportunities.
+If you heard about a great festival in New Orleans, you might alter your route to include that stop, even if it wasn&#8217;t really on your radar when you started.</p>
+</div>
+<div class="paragraph">
+<p>Agile is actually an umbrella term or general philosophy, and there are a handful of methodologies for implementing Agile principles in practice.
+Some of the most popular Agile methodologies include <em>Scrum</em>, <em>Kanban</em>, and <em>Extreme Programming (XP)</em>.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll identify a few key concepts in Scrum, which is one of the most widely used Agile methodologies:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>User Stories</strong></dt>
+<dd>
+<p>Requirements are captured as <em>user stories</em>, which are short descriptions of a feature from the perspective of an end user. User stories help prioritize work based on user needs.</p>
+</dd>
+<dt class="hdlist1"><strong>Sprints</strong></dt>
+<dd>
+<p>Scrum projects are divided into short, time-boxed iterations called <em>sprints</em>, typically lasting two to four weeks. Each sprint focuses on delivering a small, usable piece of functionality.</p>
+</dd>
+<dt class="hdlist1"><strong>Daily Stand-ups</strong></dt>
+<dd>
+<p>Teams hold brief daily meetings, called <em>stand-ups</em>, to discuss progress, identify obstacles, and plan the day&#8217;s work. These meetings help keep everyone aligned and informed.</p>
+</dd>
+<dt class="hdlist1"><strong>Sprint Reviews and Retrospectives</strong></dt>
+<dd>
+<p>At the end of each sprint, the team conducts a <em>sprint review</em> to demonstrate the completed work to stakeholders and gather feedback. They also hold a <em>retrospective</em> to reflect on the sprint process and identify areas for improvement.</p>
+</dd>
+<dt class="hdlist1"><strong>Product Owner</strong></dt>
+<dd>
+<p>The Product Owner represents the stakeholders and is responsible for defining and prioritizing the product backlog (the list of user stories and features to be developed). The Product Owner might be an external client, a project manager, or another team member.</p>
+</dd>
+<dt class="hdlist1"><strong>Scrum Master</strong></dt>
+<dd>
+<p>A Scrum Master facilitates the Scrum process, helping the team adhere to Agile principles and removing obstacles that impede progress.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Other Agile methodologies have their own specific practices and terminologies, but they all share the core principles of flexibility, collaboration, and continuous improvement.
+Beginning developers may not have the opportunity to work on Agile teams right away, but a basic understanding these concepts will prepare you for future roles in software development.</p>
 </div>
 <hr>
 </div>
@@ -473,7 +643,7 @@ And when we are faced with solving a programming problem that really intimidates
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2025-11-14<br />
-        02:59:44 UTC<br />
+        21:19:04 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
