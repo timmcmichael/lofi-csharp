@@ -132,20 +132,109 @@ The <strong>A-side</strong> was the hit everyone knew from the radio, and the <s
 <p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/Intro%20to%20C-Sharp%20(CIS162AD)/10%20Software%20Development" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
+<div class="paragraph">
+<p>Beginners learn to code by learning individual programming skills and concepts, like variables, loops, and methods.
+Typically, we write small programs that focus on one or two of those concepts at a time; in a school setting, the teacher generally assigns problems that are intentionally limited, keeping the work simple and allowing the teacher to assess mastery of specific skills.
+But for coding to be useful, we have to put those skills to use in larger projects that solve real problems.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s difficult to do in the context of a class, where time is limited and the teacher is obligated to cover specific topics&#8212;&#8203;often at a demanding pace that leaves little room for exploration.
+So this chapter zooms out to look at the bigger picture of software development.
+If you go into a career as a developer—or engage in large-scale personal projects—these topics will be a part of your everyday work.
+If you aren&#8217;t a developer but work elsewhere in tech, understanding broad software development concepts will help you collaborate effectively with coders and technical teams.
+And even if you never write another line of code after this course, knowing a little about software development will help you understand how software works and why it sometimes doesn&#8217;t.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_habits_and_mindset">.1. Habits and Mindset</h3>
 <div class="paragraph subtitle">
 <p>Developing a Professional Mindset</p>
 </div>
+<div class="paragraph">
+<p>Successful developers cultivate habits and attitudes that help them continuously improve their skills and make them effective members of a development team.
+When possible, I&#8217;ve tried to encourage these habits throughout our learning in this book and videos, but it&#8217;s important to identify some of them explicitly:</p>
+</div>
+<div class="sect3">
+<h4 id="_iterative_development">.1.1. Iterative Development</h4>
+<div class="paragraph">
+<p>Very few programs, algorithms, or features are coded perfectly on the first try.
+Instead, good developers write a small piece of code and focus on gettring that code working before moving on to the next piece.
+This approach—called <em>iterative development</em>—helps keep us from getting overwhelmed by a large or complex task; just break it down into smaller pieces, and focus on one piece at a time.</p>
+</div>
+<div class="paragraph">
+<p>If also helps us identify and fix problems early, before we have other code depending on it.</p>
+</div>
+<div class="paragraph">
+<p>Beginning coders can develop this mindset in a few ways:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Work the important stuff first</dt>
+<dd>
+<p>Identify the core functionality for the code you&#8217;re developing, and work on that first. For example, get the calculations working correctly before you worry about getting user input or displaying output nicely.</p>
+</dd>
+<dt class="hdlist1">Run your code frequently</dt>
+<dd>
+<p>After you write a few lines of code, run it and see how it behaves. If if it doesn&#8217;t produce visible evidence of how it&#8217;s working, you can at least verify that it compiles and runs without errors.</p>
+</dd>
+<dt class="hdlist1">Test small pieces</dt>
+<dd>
+<p>Once you have a small piece of code working, test it with different inputs to make sure it behaves correctly in a variety of situations.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_refactoring">.1.2. Refactoring</h4>
+<div class="paragraph">
+<p>As part of our iterative development process, we might find that our code works correctly, but could be improved in some way.
+Maybe it&#8217;s repetitive, or too long, or hard to read, or inefficient.
+Or, maybe it doesn&#8217;t conform to best practices or coding standards.
+When we identify these kinds of issues, we can go back and improve the code without changing its behavior; this process is called <em>refactoring</em>.
+Refactoring is an important skill for developers to cultivate, as it helps keep code maintainable and adaptable to future changes.</p>
+</div>
+<div class="exampleblock callout ttw">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Quick Track: Refactoring</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/dScLJZqCUec?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation">.1.3. Documentation</h4>
+<div class="paragraph">
+<p>I&#8217;ll be honest, I&#8217;m not sure I&#8217;ve ever met a developer who <strong>wants</strong> to write documentation.
+But, whether we like it or not, documentation is an essential part of software development.
+And to reiterate: documenting our code <strong>is part of software development</strong>, not an extra thing we do at the end if we have time.</p>
+</div>
+<div class="paragraph">
+<p>Good documentation helps others (and our future selves) understand how our code works, how to use it, and how to maintain it.
+It can take many forms, including:
+* Comments within the code itself
+* README files (files that explain how to use a project or application)
+* API documentation (explaining how to use specific functions or classes)
+* User manuals</p>
+</div>
+<div class="paragraph">
+<p>In a professional setting, documentation standards are often established by the development team or organization, and may be enforced through code reviews or other quality assurance processes.
+In other words, your code won&#8217;t get incorporated into the project you&#8217;ve written high quality documentation.
+In other other words, you&#8217;re no use to an employer if you can&#8217;t or won&#8217;t document your work.</p>
+</div>
+<div class="paragraph">
+<p>In my classes, I ask students to include a comment block at the top of each program that includes some basic information, but not much beyond that.
+You should be aware that most professional development teams have much more extensive documentation requirements, so be prepared to adapt to those expectations in your future work.</p>
+</div>
 <div class="ulist">
 <ul>
-<li>
-<p>Iterative Development</p>
-</li>
-<li>
-<p>Refactoring</p>
-</li>
 <li>
 <p>Documentation</p>
 </li>
@@ -156,6 +245,7 @@ The <strong>A-side</strong> was the hit everyone knew from the radio, and the <s
 <p>Commitment to Lifelong Learning</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -243,6 +333,9 @@ And when we are faced with solving a programming problem that really intimidates
 <div class="paragraph subtitle">
 <p>Keeping Everyone on the Same Page</p>
 </div>
+<div class="paragraph">
+<p>Methodologies for working together on software projects:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -288,8 +381,8 @@ And when we are faced with solving a programming problem that really intimidates
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-11-08<br />
-        16:56:28 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-11-14<br />
+        01:47:51 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
