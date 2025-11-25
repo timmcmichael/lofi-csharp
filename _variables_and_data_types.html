@@ -202,13 +202,13 @@ I encourage beginning students to think of a variable like a container, such as 
 </div>
 <div class="paragraph">
 <p>The container can hold one thing at a time.
-We can put coffee in it, or we can put water in it—but we can&#8217;t put both.
+We can put coffee in it, or we can put water in it—but we can&#8217;t put both in at the same time.
 If we start with coffee and decide we want to put water in there, the coffee gets dumped out and is gone forever.
-That&#8217;s fine, but we better make sure we don&#8217;t want the coffee anymore before we put something else in the mug.</p>
+That&#8217;s fine, but we&#8217;d better make sure we don&#8217;t want the coffee anymore before we put something else in the mug.</p>
 </div>
 <div class="paragraph">
 <p>A variable works the same way.
-It can hold one value, and that value can vary—remember, that&#8217;s where the name comes from—but once it&#8217;s changed, that old value is lost.</p>
+It can hold one value, and that value can vary—remember, that&#8217;s where the term comes from—but once it&#8217;s changed, that old value is lost.</p>
 </div>
 <div class="paragraph">
 <p>I guess we could mix coffee and water, but then that&#8217;s really a new substance and we can&#8217;t get back our plain coffee (or our water).
@@ -230,7 +230,7 @@ Storing the number 7 doesn&#8217;t take very much space; storing a picture of Jo
 The <strong>type</strong> of data we can store in a variable is called its</p>
 </div>
 <div class="paragraph">
-<p>&#8230;&#8203;<em>drumroll</em>, please&#8230;&#8203;</p>
+<p>&#8230;&#8203;<em>drumroll, please</em>&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p><strong>data type</strong>.</p>
@@ -286,23 +286,26 @@ There are a few rules that determine whether or not an identifier is valid:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Can contain letters (upper or lower case), digits (0 - 9), and/or underscores (_).</p>
+<p>It can contain letters (upper or lower case), digits (0 - 9), and/or underscores (_).</p>
 </li>
 <li>
 <p>The first character <strong>can&#8217;t</strong> be a digit.</p>
 </li>
 <li>
-<p>Can&#8217;t contain whitespaces (tab, space, etc.) or special characters (like @, #, $, etc.) except for the underscore.</p>
+<p>It can&#8217;t contain whitespaces (tab, space, etc.) or special characters (like @, #, $, etc.) except for the underscore.</p>
 </li>
 <li>
-<p>Can&#8217;t be a C# keyword or reserved word (words that are used in the C# language, like <code>double</code> or <code>public</code>)</p>
+<p>It can&#8217;t be a C# keyword or reserved word. These are words that are used in the C# language, like <code>double</code> and <code>void</code>, and you&#8217;ll learn them as we go.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>In addition to those technical rules about identifier names, the convention in C# is to use descriptive names in "camel case" format, as described in the preceding video.
-Single-letter variable names, like <code>x</code> for a number, are fine in your math class, but are generally <strong>not</strong> okay when you&#8217;re coding.
-The expectation in my course is that your code will align with those conventions—because that&#8217;s what industry people expect—and you will lose points if you don&#8217;t.</p>
+Single-letter variable names, like <code>x</code> for a number, are fine in your math class, but are generally <strong>not</strong> okay when you&#8217;re coding.</p>
+</div>
+<div class="paragraph">
+<p>The expectation in my course is that your code will align with those conventions, because that&#8217;s what industry people expect.
+And you will lose points if you don&#8217;t.</p>
 </div>
 </div>
 <div class="sect2">
@@ -310,11 +313,11 @@ The expectation in my course is that your code will align with those conventions
 <div class="paragraph">
 <p>Variables for storing numbers come in two flavors: <strong>integers</strong> and <strong>floating-point</strong> numbers.
 As you may remember from your math class, an integer is a whole number; that is, a number that doesn&#8217;t include any decimal places or fractional values.
-<em>5</em> is an integer, <em>-824</em> is an integer, while <em>3.14</em> and <em>7 1/2</em> are not.</p>
+<strong><em>5</em></strong> is an integer, <strong><em>-824</em></strong> is an integer, while <strong><em>3.14</em></strong> and <strong><em>7 1/2</em></strong> are not.</p>
 </div>
 <div class="paragraph">
 <p>A floating-point number includes decimals, so 3.14 can be stored as a floating-point number.
-7 1/2 can also be stored as a floating-point number, but only as a decimal (i.e., 7.5).</p>
+A fraction like <strong><em>7 1/2</em></strong> can also be stored as a floating-point number, but only in decimal form (i.e., <strong><em>7.5</em></strong>).</p>
 </div>
 <div class="paragraph">
 <p>The most common numeric data types in C# are <code>int</code> for integers and <code>double</code> for floating-point numbers.
@@ -324,7 +327,7 @@ You can get pretty far in programming just using those three, and in courses I t
 <p>Other data types for integers are <code>byte</code>, <code>short</code>, and <code>long</code>.
 These different types exist because they use different amounts of memory. <code>byte</code> and <code>short</code> are smaller than <code>int</code>, while <code>long</code> is larger.
 The impact of these different memory sizes (or memory <strong>allocations</strong>) is that the types can store values of different sizes.
-For example, a <code>byte</code> uses 8 bits of memory and can store a number between -128 and 127 (inclusive), while an <code>int</code> takes 32 bits and can store a value between -2,147,483,648 and 2,147,483,647 (inclusive).</p>
+For example, a <code>byte</code> uses 8 bits of memory and can store a number between <strong><em>-128</em></strong> and <strong><em>127</em></strong> (inclusive), while an <code>int</code> takes 32 bits and can store a value between <strong><em>-2,147,483,648</em></strong> and <strong><em>2,147,483,647</em></strong> (inclusive).</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -349,7 +352,7 @@ It&#8217;s used for financial calculations and other situations where precision 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> milesDavisBirthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1926</span><span style="color: #f8f8f2">;</span>
 <span style="color: #66d9ef">float</span><span style="color: #f8f8f2"> vinylRecordRPM </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">33.33f</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> billieHolidayRecordSales </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">_200_000; </span><span style="color: #959077">// Approximate sales</span>
+<span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> rollingStonesAverageAttendance </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">11345.3</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// 1969 U.S. tour average audience (estimated)</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -357,7 +360,7 @@ It&#8217;s used for financial calculations and other situations where precision 
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>f</code> suffix denotes that the value 33.33 is a <code>float</code> rather than a <code>double</code>.</td>
+<td>The <code>f</code> suffix denotes that the value <strong><em>33.33</em></strong> is a <code>float</code> rather than a <code>double</code>.</td>
 </tr>
 </table>
 </div>
@@ -366,7 +369,7 @@ It&#8217;s used for financial calculations and other situations where precision 
 <div class="paragraph">
 <p>The general rule in programming is to be as efficient with your resources (memory, storage, processing speed, network bandwidth, etc.) as possible.
 If you&#8217;re storing a person&#8217;s age, you don&#8217;t really need an <code>int</code>; nobody is going to be two million years old!
-A <code>byte</code> has plenty of room (up to 127) to store even the oldest person&#8217;s age, and it uses a fraction of the memory—8 bits instead of 32.
+A <code>byte</code> has plenty of room (up to <strong><em>127</em></strong>) to store even the oldest person&#8217;s age, and it uses a fraction of the memory—8 bits instead of 32.
 So I should be telling you to use a <code>byte</code> in this case.</p>
 </div>
 <div class="paragraph">
@@ -588,13 +591,13 @@ If we want to display the output of a variable—or a constant—we just put the
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Elvis Presley was born in 1935.</pre>
+<pre>Elvis Presley was born in 1935</pre>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_concatenating_output">2.7.1. Concatenating Output</h4>
 <div class="paragraph">
-<p>We can combine output into one statement by creating a string with multiple pieces using the <code>+</code> symbol.</p>
+<p>We can combine output into one statement by creating a string from multiple pieces using the <code>+</code> symbol.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 2.8 - Outputting variables with concatenation</div>
@@ -636,7 +639,7 @@ The easiest for beginners is to put the <code>$</code> symbol in front of the op
 </div>
 </div>
 <div class="paragraph">
-<p>For my assignments, you can use either concatenation or interpretation, but I encourage you to learn interpolation.
+<p>For coursework in my class, you can use either concatenation or interpretation, but I encourage you to learn interpolation.
 It&#8217;s easier to read and write than concatenation and is considered the standard approach.
 Once you&#8217;ve gotten the hang of it, it&#8217;s very easy to use.</p>
 </div>
@@ -1196,8 +1199,8 @@ You should recognize both, but you can use whichever you prefer in your code.</p
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-11-21<br />
-        20:26:15 UTC<br />
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-11-25<br />
+        00:44:04 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
