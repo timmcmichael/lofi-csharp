@@ -284,7 +284,7 @@ I mention it here because it&#8217;s a common source of confusion for students w
 To perform a case-insensitive comparison, we can use the <code>String.Equals()</code> method with the <code>StringComparison.OrdinalIgnoreCase</code> option.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.3 - Case insensitive string comparison in C#</div>
+<div class="title">Example 4.3 - Case insensitive string comparison in C# with <code>StringComparison.OrdinalIgnoreCase</code></div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -299,7 +299,7 @@ To perform a case-insensitive comparison, we can use the <code>String.Equals()</
 Though the above approach using <code>Equals()</code> is preferred, you could use the <code>ToUpper()</code> or <code>ToLower()</code> methods to perform a case-insensitive comparison.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.4 - Case insensitive string comparison in C#</div>
+<div class="title">Example 4.4 - Case insensitive string comparison in C# with <code>ToUpper()</code></div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -937,7 +937,7 @@ We need to include the variable name and the comparison operator on <strong>both
 <div class="sect3">
 <h4 id="_the_not_operator">4.6.1. The NOT Operator</h4>
 <div class="paragraph">
-<p>The NOT operation is a little different, as it only takes one operand (making it a <em>unary</em> operator_, if you&#8217;re nerdy about words, like I am).
+<p>The NOT operation is a little different, as it only takes one operand (making it a <em>unary operator</em>, if you&#8217;re nerdy about words, like I am).
 It simply inverts the value of the operand.
 If the operand is <code>true</code>, the NOT operation will evaluate to <code>false</code>.
 If the operand is <code>false</code>, the NOT operation will evaluate to <code>true</code>.</p>
@@ -1083,9 +1083,19 @@ And since you see them often in code written by others, it&#8217;s good to know 
 If there is no match, the program will execute the <code>default</code> block, if it is present.</p>
 </div>
 <div class="paragraph">
-<p>The <code>break</code> statement is used to exit the <code>switch</code> block due to a behavior of <code>switch</code> that can be confusing to beginners, known as <em>fall-through</em>.
-If we don&#8217;t include a <code>break</code> statement at the end of a <code>case</code> block, the program will continue executing the code in the next <code>case</code> block, even if the value of the expression doesn&#8217;t match the <code>case</code>.
-This can be useful in some situations, but it&#8217;s generally not what you want, so you&#8217;ll usually see a <code>break</code> statement at the end of each <code>case</code> block.</p>
+<p>The <code>break</code> statement is used to exit the <code>switch</code> block. There are a few other options for exiting a <code>switch</code> block, such as <code>return</code> or <code>throw</code>, but for our purposes as beginners, we just need to remember to put <code>break</code> at the end of each <code>case</code> block.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+C# doesn&#8217;t have automatic <em>fall-through</em> like some other languages, such as Java. Each <code>switch</code> block must be terminated in order for the code to compile.
+</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="title">Example 4.15 - A <code>switch</code> statement in C#.</div>
@@ -1220,7 +1230,7 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Quarrymen Edition,&nbsp;revised&nbsp;2026-05-03<br />
-        18:40:02 UTC<br />
+        20:35:48 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
